@@ -1,0 +1,853 @@
+
+09:29:58: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+./fh_loader --port=/dev/ttyUSB0 --signeddigests=Digest.mbn --noprompt --showpercentagecomplete --zlpawarehost=1 --memoryname=ufs --testvipimpact 
+************************************************
+
+09:29:58: DEBUG: Binary build date: Sep 14 2024 @ 14:41:00
+
+09:29:58: DEBUG: Build Version: 24.09.14.14.41.00
+
+09:29:58: INFO: Current working dir (cwd): /ssd1/oneplus-12r/1a-EDL-exploits-8g2/oplus_8g2/
+09:29:58: INFO: Showing network mappings to allow debugging
+09:29:58: DEBUG: User set ZLPAWAREHOST to 1
+
+09:29:58: DEBUG: User wants testvipimpact
+
+09:29:58: INFO: User wants to talk to port '/dev/ttyUSB0'
+09:29:58: DEBUG: port_fd=0x4
+
+09:29:58: INFO: Took       0.00008500 seconds to open port
+09:29:58: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+09:29:58: DEBUG: ==================================================================================
+09:29:58: DEBUG: ==================================================================================
+09:29:58: INFO: Looking for file 'Digest.mbn'
+09:29:58: DEBUG: 2. Calling stat(Digest.mbn)
+09:29:58: DEBUG: 2. Calling fopen('Digest.mbn') with AccessMode='rb'
+09:29:58: DEBUG: Trying get filesize, calling fseek()
+09:29:58: DEBUG: Found 'Digest.mbn' (28472 bytes) in local directory '/ssd1/oneplus-12r/1a-EDL-exploits-8g2/oplus_8g2/
+09:29:58: INFO: Signed Digest Table (28472 bytes) 'Digest.mbn' 
+09:29:58: DEBUG: 2. Calling fopen('Digest.mbn') with AccessMode='rb'
+09:29:58: DEBUG: Trying get filesize, calling fseek()
+09:29:58: DEBUG: File size is 28472 bytes
+09:29:58: INFO: SIGNED Digest table had 688 digests
+09:29:58: INFO: MaxNumDigestsPerTable is 256
+09:29:58: INFO: Setting CurrentDigestLocation to number 202, meaning 54 hashes to go before a new table must be sent
+09:29:58: INFO: Calling sendTransmitBufferBytes(28472 bytes)
+09:29:58: DEBUG: CHANNEL DATA (P0000) (H00202) (  28472 bytes) - HOST TO TARGET --> SHA256 DIGEST: 507A24DF9449B49A4A437DF6B5AF88E5BE3571E03219AB63DEFD8751BE561CFC
+===========================================================================================================
+ELF
+============================================================================================================
+
+09:29:58: DEBUG: XML FILE (79 bytes): CharsInBuffer=79-79=0
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<response value="ACK" />
+</data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: DEBUG: Response was 'ACK'
+09:29:58: DEBUG: Got the ACK
+09:29:58: INFO: 	 _____ _                   _                  
+09:29:58: INFO: 	/  ___(_)                 | |                 
+09:29:58: INFO: 	\ `--. _  __ _ _ __   __ _| |_ _   _ _ __ ___ 
+09:29:58: INFO: 	 `--. \ |/ _` | '_ \ / _` | __| | | | '__/ _ \
+09:29:58: INFO: 	/\__/ / | (_| | | | | (_| | |_| |_| | | |  __/
+09:29:58: INFO: 	\____/|_|\__, |_| |_|\__,_|\__|\__,_|_|  \___|
+09:29:58: INFO: 	          __/ |                               
+09:29:58: INFO: 	         |___/   
+
+09:29:58: INFO: 	______                      _ 
+09:29:58: INFO: 	| ___ \                    | |
+09:29:58: INFO: 	| |_/ /_ _ ___ ___  ___  __| |
+09:29:58: INFO: 	|  __/ _` / __/ __|/ _ \/ _` |
+09:29:58: INFO: 	| | | (_| \__ \__ \  __/ (_| |
+09:29:58: INFO: 	\_|  \__,_|___/___/\___|\__,_|
+
+09:29:58: DEBUG: FIREHOSE: Signed DIGEST sent. This is not counted towards command sent
+09:29:58: DEBUG: FIREHOSE: PacketsSent reset to 0
+09:29:58: DEBUG: ==================================================================================
+09:29:58: DEBUG: ==================================================================================
+09:29:58: INFO: Looking for file 'Digest.mbn'
+09:29:58: DEBUG: 2. Calling stat(Digest.mbn)
+09:29:58: DEBUG: 2. Calling fopen('Digest.mbn') with AccessMode='rb'
+09:29:58: DEBUG: Trying get filesize, calling fseek()
+09:29:58: DEBUG: Found 'Digest.mbn' (28472 bytes) in local directory '/ssd1/oneplus-12r/1a-EDL-exploits-8g2/oplus_8g2/
+09:29:58: INFO: Signed Digest Table (28472 bytes) 'Digest.mbn' 
+09:29:58: DEBUG: 2. Calling fopen('Digest.mbn') with AccessMode='rb'
+09:29:58: DEBUG: Trying get filesize, calling fseek()
+09:29:58: DEBUG: File size is 28472 bytes
+09:29:58: INFO: SIGNED Digest table had 688 digests
+09:29:58: INFO: MaxNumDigestsPerTable is 256
+09:29:58: INFO: Setting CurrentDigestLocation to number 202, meaning 54 hashes to go before a new table must be sent
+09:29:58: INFO: Calling sendTransmitBufferBytes(28472 bytes)
+09:29:58: DEBUG: CHANNEL DATA (P0000) (H00202) (  28472 bytes) - HOST TO TARGET --> SHA256 DIGEST: 507A24DF9449B49A4A437DF6B5AF88E5BE3571E03219AB63DEFD8751BE561CFC
+===========================================================================================================
+ELF
+============================================================================================================
+
+09:29:58: INFO: Trying to write 28472 bytes
+09:29:58: INFO: Just wrote 28472 bytes
+09:29:58: DEBUG: CharsInBuffer=0 Trying to read from USB 8192 bytes
+09:29:58: DEBUG: CHANNEL DATA (3882 bytes) <-- TARGET to HOST
+09:29:58: DEBUG: CharsInBuffer = 3882
+09:29:58: DEBUG: printBuffer:6017 PRETTYPRINT Buffer is 3882 bytes
+
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 56 65 72 73 69 6F 6E 3A 20 53 4D 38 35 35 30  Version: SM8550
+09:29:58: DEBUG: printBuffer:6094 5F 56 32 2E 31 2E 36 5F 52 42 26 53 46 20 22 20 _V2.1.6_RB&SF " 
+09:29:58: DEBUG: printBuffer:6094 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 /></data><?xml v
+09:29:58: DEBUG: printBuffer:6094 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 ersion="1.0" enc
+09:29:58: DEBUG: printBuffer:6094 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E oding="UTF-8" ?>
+09:29:58: DEBUG: printBuffer:6094 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C .<data>.<log val
+09:29:58: DEBUG: printBuffer:6094 75 65 3D 22 49 4E 46 4F 3A 20 42 69 6E 61 72 79 ue="INFO: Binary
+09:29:58: DEBUG: printBuffer:6094 20 62 75 69 6C 64 20 64 61 74 65 3A 20 4E 6F 76  build date: Nov
+09:29:58: DEBUG: printBuffer:6094 20 32 35 20 32 30 32 32 20 40 20 31 37 3A 31 33  25 2022 @ 17:13
+09:29:58: DEBUG: printBuffer:6094 3A 33 36 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F :36" /></data><?
+09:29:58: DEBUG: printBuffer:6094 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 xml version="1.0
+09:29:58: DEBUG: printBuffer:6094 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D " encoding="UTF-
+09:29:58: DEBUG: printBuffer:6094 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 8" ?>.<data>.<lo
+09:29:58: DEBUG: printBuffer:6094 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 42 g value="INFO: B
+09:29:58: DEBUG: printBuffer:6094 69 6E 61 72 79 20 62 75 69 6C 64 20 64 61 74 65 inary build date
+09:29:58: DEBUG: printBuffer:6094 3A 20 4E 6F 76 20 32 35 20 32 30 32 32 20 40 20 : Nov 25 2022 @ 
+09:29:58: DEBUG: printBuffer:6094 31 37 3A 31 33 3A 33 36 0A 22 20 2F 3E 3C 2F 64 17:13:36." /></d
+09:29:58: DEBUG: printBuffer:6094 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F ata><?xml versio
+09:29:58: DEBUG: printBuffer:6094 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 n="1.0" encoding
+09:29:58: DEBUG: printBuffer:6094 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 ="UTF-8" ?>.<dat
+09:29:58: DEBUG: printBuffer:6094 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 a>.<log value="I
+09:29:58: DEBUG: printBuffer:6094 4E 46 4F 3A 20 46 75 6E 63 74 69 6F 6E 20 56 65 NFO: Function Ve
+09:29:58: DEBUG: printBuffer:6094 72 73 69 6F 6E 3A 20 56 31 2E 31 20 22 20 2F 3E rsion: V1.1 " />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 43 68 69 70 20 73 65 72 ="INFO: Chip ser
+09:29:58: DEBUG: printBuffer:6094 69 61 6C 20 6E 75 6D 20 28 30 78 64 33 65 34 62 ial num (0xd3e4b
+09:29:58: DEBUG: printBuffer:6094 37 34 30 29 20 43 68 69 70 20 49 44 20 28 30 78 740) Chip ID (0x
+09:29:58: DEBUG: printBuffer:6094 30 29 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 0)" /></data><?x
+09:29:58: DEBUG: printBuffer:6094 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 ml version="1.0"
+09:29:58: DEBUG: printBuffer:6094 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38  encoding="UTF-8
+09:29:58: DEBUG: printBuffer:6094 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 " ?>.<data>.<log
+09:29:58: DEBUG: printBuffer:6094 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 53 75  value="INFO: Su
+09:29:58: DEBUG: printBuffer:6094 70 70 6F 72 74 65 64 20 46 75 6E 63 74 69 6F 6E pported Function
+09:29:58: DEBUG: printBuffer:6094 73 20 28 32 39 29 3A 22 20 2F 3E 3C 2F 64 61 74 s (29):" /></dat
+09:29:58: DEBUG: printBuffer:6094 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D a><?xml version=
+09:29:58: DEBUG: printBuffer:6094 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 "1.0" encoding="
+09:29:58: DEBUG: printBuffer:6094 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E UTF-8" ?>.<data>
+09:29:58: DEBUG: printBuffer:6094 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 .<log value="INF
+09:29:58: DEBUG: printBuffer:6094 4F 3A 20 70 72 6F 67 72 61 6D 22 20 2F 3E 3C 2F O: program" /></
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 data><?xml versi
+09:29:58: DEBUG: printBuffer:6094 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E on="1.0" encodin
+09:29:58: DEBUG: printBuffer:6094 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 g="UTF-8" ?>.<da
+09:29:58: DEBUG: printBuffer:6094 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 ta>.<log value="
+09:29:58: DEBUG: printBuffer:6094 49 4E 46 4F 3A 20 72 65 61 64 22 20 2F 3E 3C 2F INFO: read" /></
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 data><?xml versi
+09:29:58: DEBUG: printBuffer:6094 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E on="1.0" encodin
+09:29:58: DEBUG: printBuffer:6094 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 g="UTF-8" ?>.<da
+09:29:58: DEBUG: printBuffer:6094 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 ta>.<log value="
+09:29:58: DEBUG: printBuffer:6094 49 4E 46 4F 3A 20 6E 6F 70 22 20 2F 3E 3C 2F 64 INFO: nop" /></d
+09:29:58: DEBUG: printBuffer:6094 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F ata><?xml versio
+09:29:58: DEBUG: printBuffer:6094 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 n="1.0" encoding
+09:29:58: DEBUG: printBuffer:6094 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 ="UTF-8" ?>.<dat
+09:29:58: DEBUG: printBuffer:6094 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 a>.<log value="I
+09:29:58: DEBUG: printBuffer:6094 4E 46 4F 3A 20 70 61 74 63 68 22 20 2F 3E 3C 2F NFO: patch" /></
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 data><?xml versi
+09:29:58: DEBUG: printBuffer:6094 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E on="1.0" encodin
+09:29:58: DEBUG: printBuffer:6094 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 g="UTF-8" ?>.<da
+09:29:58: DEBUG: printBuffer:6094 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 ta>.<log value="
+09:29:58: DEBUG: printBuffer:6094 49 4E 46 4F 3A 20 63 6F 6E 66 69 67 75 72 65 22 INFO: configure"
+09:29:58: DEBUG: printBuffer:6094 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20  /></data><?xml 
+09:29:58: DEBUG: printBuffer:6094 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E version="1.0" en
+09:29:58: DEBUG: printBuffer:6094 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F coding="UTF-8" ?
+09:29:58: DEBUG: printBuffer:6094 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 >.<data>.<log va
+09:29:58: DEBUG: printBuffer:6094 6C 75 65 3D 22 49 4E 46 4F 3A 20 73 65 74 62 6F lue="INFO: setbo
+09:29:58: DEBUG: printBuffer:6094 6F 74 61 62 6C 65 73 74 6F 72 61 67 65 64 72 69 otablestoragedri
+09:29:58: DEBUG: printBuffer:6094 76 65 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 ve" /></data><?x
+09:29:58: DEBUG: printBuffer:6094 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 ml version="1.0"
+09:29:58: DEBUG: printBuffer:6094 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38  encoding="UTF-8
+09:29:58: DEBUG: printBuffer:6094 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 " ?>.<data>.<log
+09:29:58: DEBUG: printBuffer:6094 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 65 72  value="INFO: er
+09:29:58: DEBUG: printBuffer:6094 61 73 65 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F ase" /></data><?
+09:29:58: DEBUG: printBuffer:6094 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 xml version="1.0
+09:29:58: DEBUG: printBuffer:6094 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D " encoding="UTF-
+09:29:58: DEBUG: printBuffer:6094 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 8" ?>.<data>.<lo
+09:29:58: DEBUG: printBuffer:6094 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 70 g value="INFO: p
+09:29:58: DEBUG: printBuffer:6094 6F 77 65 72 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C ower" /></data><
+09:29:58: DEBUG: printBuffer:6094 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E ?xml version="1.
+09:29:58: DEBUG: printBuffer:6094 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 0" encoding="UTF
+09:29:58: DEBUG: printBuffer:6094 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C -8" ?>.<data>.<l
+09:29:58: DEBUG: printBuffer:6094 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 og value="INFO: 
+09:29:58: DEBUG: printBuffer:6094 66 69 72 6D 77 61 72 65 77 72 69 74 65 22 20 2F firmwarewrite" /
+09:29:58: DEBUG: printBuffer:6094 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 ></data><?xml ve
+09:29:58: DEBUG: printBuffer:6094 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F rsion="1.0" enco
+09:29:58: DEBUG: printBuffer:6094 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A ding="UTF-8" ?>.
+09:29:58: DEBUG: printBuffer:6094 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 <data>.<log valu
+09:29:58: DEBUG: printBuffer:6094 65 3D 22 49 4E 46 4F 3A 20 67 65 74 73 74 6F 72 e="INFO: getstor
+09:29:58: DEBUG: printBuffer:6094 61 67 65 69 6E 66 6F 22 20 2F 3E 3C 2F 64 61 74 ageinfo" /></dat
+09:29:58: DEBUG: printBuffer:6094 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D a><?xml version=
+09:29:58: DEBUG: printBuffer:6094 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 "1.0" encoding="
+09:29:58: DEBUG: printBuffer:6094 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E UTF-8" ?>.<data>
+09:29:58: DEBUG: printBuffer:6094 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 .<log value="INF
+09:29:58: DEBUG: printBuffer:6094 4F 3A 20 62 65 6E 63 68 6D 61 72 6B 22 20 2F 3E O: benchmark" />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 65 6D 6D 63 22 20 2F 3E ="INFO: emmc" />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 75 66 73 22 20 2F 3E 3C ="INFO: ufs" /><
+09:29:58: DEBUG: printBuffer:6094 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 /data><?xml vers
+09:29:58: DEBUG: printBuffer:6094 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 ion="1.0" encodi
+09:29:58: DEBUG: printBuffer:6094 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 ng="UTF-8" ?>.<d
+09:29:58: DEBUG: printBuffer:6094 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D ata>.<log value=
+09:29:58: DEBUG: printBuffer:6094 22 49 4E 46 4F 3A 20 66 69 78 67 70 74 22 20 2F "INFO: fixgpt" /
+09:29:58: DEBUG: printBuffer:6094 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 ></data><?xml ve
+09:29:58: DEBUG: printBuffer:6094 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F rsion="1.0" enco
+09:29:58: DEBUG: printBuffer:6094 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A ding="UTF-8" ?>.
+09:29:58: DEBUG: printBuffer:6094 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 <data>.<log valu
+09:29:58: DEBUG: printBuffer:6094 65 3D 22 49 4E 46 4F 3A 20 67 65 74 73 68 61 32 e="INFO: getsha2
+09:29:58: DEBUG: printBuffer:6094 35 36 64 69 67 65 73 74 22 20 2F 3E 3C 2F 64 61 56digest" /></da
+09:29:58: DEBUG: printBuffer:6094 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E ta><?xml version
+09:29:58: DEBUG: printBuffer:6094 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D ="1.0" encoding=
+09:29:58: DEBUG: printBuffer:6094 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 "UTF-8" ?>.<data
+09:29:58: DEBUG: printBuffer:6094 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E >.<log value="IN
+09:29:58: DEBUG: printBuffer:6094 46 4F 3A 20 73 68 61 32 35 36 69 6E 69 74 22 20 FO: sha256init" 
+09:29:58: DEBUG: printBuffer:6094 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 /></data><?xml v
+09:29:58: DEBUG: printBuffer:6094 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 ersion="1.0" enc
+09:29:58: DEBUG: printBuffer:6094 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E oding="UTF-8" ?>
+09:29:58: DEBUG: printBuffer:6094 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C .<data>.<log val
+09:29:58: DEBUG: printBuffer:6094 75 65 3D 22 49 4E 46 4F 3A 20 73 68 61 32 35 36 ue="INFO: sha256
+09:29:58: DEBUG: printBuffer:6094 66 69 6E 61 6C 22 20 2F 3E 3C 2F 64 61 74 61 3E final" /></data>
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 70 72 6F 67 72 61 6D 63 75 73 74 22 20 2F 3E  programcust" />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 65 72 61 73 65 62 61 63 ="INFO: erasebac
+09:29:58: DEBUG: printBuffer:6094 6B 75 70 67 70 74 22 20 2F 3E 3C 2F 64 61 74 61 kupgpt" /></data
+09:29:58: DEBUG: printBuffer:6094 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 ><?xml version="
+09:29:58: DEBUG: printBuffer:6094 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 1.0" encoding="U
+09:29:58: DEBUG: printBuffer:6094 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A TF-8" ?>.<data>.
+09:29:58: DEBUG: printBuffer:6094 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F <log value="INFO
+09:29:58: DEBUG: printBuffer:6094 3A 20 65 72 61 73 65 75 73 65 72 64 61 74 61 22 : eraseuserdata"
+09:29:58: DEBUG: printBuffer:6094 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20  /></data><?xml 
+09:29:58: DEBUG: printBuffer:6094 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E version="1.0" en
+09:29:58: DEBUG: printBuffer:6094 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F coding="UTF-8" ?
+09:29:58: DEBUG: printBuffer:6094 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 >.<data>.<log va
+09:29:58: DEBUG: printBuffer:6094 6C 75 65 3D 22 49 4E 46 4F 3A 20 6D 6F 76 65 22 lue="INFO: move"
+09:29:58: DEBUG: printBuffer:6094 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20  /></data><?xml 
+09:29:58: DEBUG: printBuffer:6094 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E version="1.0" en
+09:29:58: DEBUG: printBuffer:6094 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F coding="UTF-8" ?
+09:29:58: DEBUG: printBuffer:6094 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 >.<data>.<log va
+09:29:58: DEBUG: printBuffer:6094 6C 75 65 3D 22 49 4E 46 4F 3A 20 67 65 74 73 69 lue="INFO: getsi
+09:29:58: DEBUG: printBuffer:6094 67 6E 64 61 74 61 22 20 2F 3E 3C 2F 64 61 74 61 gndata" /></data
+09:29:58: DEBUG: printBuffer:6094 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 ><?xml version="
+09:29:58: DEBUG: printBuffer:6094 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 1.0" encoding="U
+09:29:58: DEBUG: printBuffer:6094 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A TF-8" ?>.<data>.
+09:29:58: DEBUG: printBuffer:6094 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F <log value="INFO
+09:29:58: DEBUG: printBuffer:6094 3A 20 76 65 72 69 66 79 22 20 2F 3E 3C 2F 64 61 : verify" /></da
+09:29:58: DEBUG: printBuffer:6094 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E ta><?xml version
+09:29:58: DEBUG: printBuffer:6094 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D ="1.0" encoding=
+09:29:58: DEBUG: printBuffer:6094 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 "UTF-8" ?>.<data
+09:29:58: DEBUG: printBuffer:6094 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E >.<log value="IN
+09:29:58: DEBUG: printBuffer:6094 46 4F 3A 20 77 72 69 74 65 76 65 72 22 20 2F 3E FO: writever" />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 77 72 69 74 65 6C 6F 63 ="INFO: writeloc
+09:29:58: DEBUG: printBuffer:6094 6B 64 61 74 61 22 20 2F 3E 3C 2F 64 61 74 61 3E kdata" /></data>
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 67 65 74 62 61 73 69 63 64 61 74 61 22 20 2F  getbasicdata" /
+09:29:58: DEBUG: printBuffer:6094 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 ></data><?xml ve
+09:29:58: DEBUG: printBuffer:6094 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F rsion="1.0" enco
+09:29:58: DEBUG: printBuffer:6094 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A ding="UTF-8" ?>.
+09:29:58: DEBUG: printBuffer:6094 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 <data>.<log valu
+09:29:58: DEBUG: printBuffer:6094 65 3D 22 49 4E 46 4F 3A 20 77 72 69 74 65 63 64 e="INFO: writecd
+09:29:58: DEBUG: printBuffer:6094 74 64 61 74 61 22 20 2F 3E 3C 2F 64 61 74 61 3E tdata" /></data>
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 72 65 73 65 74 64 69 67 65 73 74 22 20 2F 3E  resetdigest" />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 74 72 61 6E 73 66 65 72 ="INFO: transfer
+09:29:58: DEBUG: printBuffer:6094 63 66 67 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F cfg" /></data><?
+09:29:58: DEBUG: printBuffer:6094 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 xml version="1.0
+09:29:58: DEBUG: printBuffer:6094 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D " encoding="UTF-
+09:29:58: DEBUG: printBuffer:6094 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 8" ?>.<data>.<lo
+09:29:58: DEBUG: printBuffer:6094 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 45 g value="INFO: E
+09:29:58: DEBUG: printBuffer:6094 6E 64 20 6F 66 20 73 75 70 70 6F 72 74 65 64 20 nd of supported 
+09:29:58: DEBUG: printBuffer:6094 66 75 6E 63 74 69 6F 6E 73 20 32 39 22 20 2F 3E functions 29" />
+09:29:58: DEBUG: printBuffer:6094 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 </data><?xml ver
+09:29:58: DEBUG: printBuffer:6094 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 sion="1.0" encod
+09:29:58: DEBUG: printBuffer:6094 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C ing="UTF-8" ?>.<
+09:29:58: DEBUG: printBuffer:6094 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 data>.<log value
+09:29:58: DEBUG: printBuffer:6094 3D 22 49 4E 46 4F 3A 20 64 65 76 70 72 67 5F 73 ="INFO: devprg_s
+09:29:58: DEBUG: printBuffer:6094 70 6D 69 5F 69 6E 69 74 3A 20 73 75 63 63 65 73 pmi_init: succes
+09:29:58: DEBUG: printBuffer:6094 73 3A 30 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F s:0" /></data><?
+09:29:58: DEBUG: printBuffer:6094 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 xml version="1.0
+09:29:58: DEBUG: printBuffer:6094 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D " encoding="UTF-
+09:29:58: DEBUG: printBuffer:6094 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 8" ?>.<data>.<lo
+09:29:58: DEBUG: printBuffer:6094 67 20 76 61 6C 75 65 3D 22 45 52 52 4F 52 3A 20 g value="ERROR: 
+09:29:58: DEBUG: printBuffer:6094 30 78 32 36 34 36 20 53 70 6D 69 42 75 73 5F 52 0x2646 SpmiBus_R
+09:29:58: DEBUG: printBuffer:6094 65 61 64 4C 6F 6E 67 3A 20 66 61 69 6C 3A 30 78 eadLong: fail:0x
+09:29:58: DEBUG: printBuffer:6094 30 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 0" /></data><?xm
+09:29:58: DEBUG: printBuffer:6094 6C 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 l version="1.0" 
+09:29:58: DEBUG: printBuffer:6094 65 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 encoding="UTF-8"
+09:29:58: DEBUG: printBuffer:6094 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20  ?>.<data>.<log 
+09:29:58: DEBUG: printBuffer:6094 76 61 6C 75 65 3D 22 49 4E 46 4F 3A 20 30 78 32 value="INFO: 0x2
+09:29:58: DEBUG: printBuffer:6094 36 34 36 20 72 5F 64 61 74 61 3A 20 30 78 30 22 646 r_data: 0x0"
+09:29:58: DEBUG: printBuffer:6094 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20  /></data><?xml 
+09:29:58: DEBUG: printBuffer:6094 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E version="1.0" en
+09:29:58: DEBUG: printBuffer:6094 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F coding="UTF-8" ?
+09:29:58: DEBUG: printBuffer:6094 3E 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 >.<data>.<log va
+09:29:58: DEBUG: printBuffer:6094 6C 75 65 3D 22 49 4E 46 4F 3A 20 30 78 32 36 34 lue="INFO: 0x264
+09:29:58: DEBUG: printBuffer:6094 30 20 72 5F 64 61 74 61 3A 20 30 78 30 22 20 2F 0 r_data: 0x0" /
+09:29:58: DEBUG: printBuffer:6094 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 ></data><?xml ve
+09:29:58: DEBUG: printBuffer:6094 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F rsion="1.0" enco
+09:29:58: DEBUG: printBuffer:6094 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A ding="UTF-8" ?>.
+09:29:58: DEBUG: printBuffer:6094 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 <data>.<log valu
+09:29:58: DEBUG: printBuffer:6094 65 3D 22 45 52 52 4F 52 3A 20 64 65 76 70 72 67 e="ERROR: devprg
+09:29:58: DEBUG: printBuffer:6094 5F 70 6D 5F 63 68 61 72 67 65 72 5F 73 65 74 20 _pm_charger_set 
+09:29:58: DEBUG: printBuffer:6094 65 72 72 6F 72 20 32 38 0A 22 20 2F 3E 3C 2F 64 error 28." /></d
+09:29:58: DEBUG: printBuffer:6094 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 69 6F ata><?xml versio
+09:29:58: DEBUG: printBuffer:6094 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 6E 67 n="1.0" encoding
+09:29:58: DEBUG: printBuffer:6094 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 ="UTF-8" ?>.<dat
+09:29:58: DEBUG: printBuffer:6094 61 3E 0A 3C 6C 6F 67 20 76 61 6C 75 65 3D 22 49 a>.<log value="I
+09:29:58: DEBUG: printBuffer:6094 4E 46 4F 3A 20 56 49 50 20 69 73 20 65 6E 61 62 NFO: VIP is enab
+09:29:58: DEBUG: printBuffer:6094 6C 65 64 2C 20 72 65 63 65 69 76 69 6E 67 20 74 led, receiving t
+09:29:58: DEBUG: printBuffer:6094 68 65 20 70 61 72 74 69 74 69 6F 6E 20 69 6E 66 he partition inf
+09:29:58: DEBUG: printBuffer:6094 6F 20 6F 66 20 73 69 7A 65 20 33 36 38 36 34 22 o of size 36864"
+09:29:58: DEBUG: printBuffer:6094 20 2F 3E 3C 2F 64 61 74 61 3E                    /></data>
+09:29:58: DEBUG: printBuffer:6107 
+
+
+09:29:58: DEBUG: XML FILE (105 bytes): CharsInBuffer=3882-105=3777
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Version: SM8550_V2.1.6_RB&SF " /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Version: SM8550_V2.1.6_RB&SF '
+09:29:58: DEBUG: XML FILE (117 bytes): CharsInBuffer=3777-117=3660
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Binary build date: Nov 25 2022 @ 17:13:36" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Binary build date: Nov 25 2022 @ 17:13:36'
+09:29:58: DEBUG: XML FILE (118 bytes): CharsInBuffer=3660-118=3542
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Binary build date: Nov 25 2022 @ 17:13:36
+" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Binary build date: Nov 25 2022 @ 17:13:36
+'
+09:29:58: DEBUG: XML FILE (99 bytes): CharsInBuffer=3542-99=3443
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Function Version: V1.1 " /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Function Version: V1.1 '
+09:29:58: DEBUG: XML FILE (118 bytes): CharsInBuffer=3443-118=3325
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Chip serial num (0xd3e4b740) Chip ID (0x0)" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Chip serial num (0xd3e4b740) Chip ID (0x0)'
+09:29:58: DEBUG: XML FILE (101 bytes): CharsInBuffer=3325-101=3224
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Supported Functions (29):" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Supported Functions (29):'
+09:29:58: DEBUG: XML FILE (83 bytes): CharsInBuffer=3224-83=3141
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: program" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: program'
+09:29:58: DEBUG: XML FILE (80 bytes): CharsInBuffer=3141-80=3061
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: read" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: read'
+09:29:58: DEBUG: XML FILE (79 bytes): CharsInBuffer=3061-79=2982
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: nop" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: nop'
+09:29:58: DEBUG: XML FILE (81 bytes): CharsInBuffer=2982-81=2901
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: patch" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: patch'
+09:29:58: DEBUG: XML FILE (85 bytes): CharsInBuffer=2901-85=2816
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: configure" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: configure'
+09:29:58: DEBUG: XML FILE (99 bytes): CharsInBuffer=2816-99=2717
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: setbootablestoragedrive" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: setbootablestoragedrive'
+09:29:58: DEBUG: XML FILE (81 bytes): CharsInBuffer=2717-81=2636
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: erase" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: erase'
+09:29:58: DEBUG: XML FILE (81 bytes): CharsInBuffer=2636-81=2555
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: power" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: power'
+09:29:58: DEBUG: XML FILE (89 bytes): CharsInBuffer=2555-89=2466
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: firmwarewrite" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: firmwarewrite'
+09:29:58: DEBUG: XML FILE (90 bytes): CharsInBuffer=2466-90=2376
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: getstorageinfo" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: getstorageinfo'
+09:29:58: DEBUG: XML FILE (85 bytes): CharsInBuffer=2376-85=2291
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: benchmark" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: benchmark'
+09:29:58: DEBUG: XML FILE (80 bytes): CharsInBuffer=2291-80=2211
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: emmc" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: emmc'
+09:29:58: DEBUG: XML FILE (79 bytes): CharsInBuffer=2211-79=2132
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: ufs" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: ufs'
+09:29:58: DEBUG: XML FILE (82 bytes): CharsInBuffer=2132-82=2050
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: fixgpt" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: fixgpt'
+09:29:58: DEBUG: XML FILE (91 bytes): CharsInBuffer=2050-91=1959
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: getsha256digest" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: getsha256digest'
+09:29:58: DEBUG: XML FILE (86 bytes): CharsInBuffer=1959-86=1873
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: sha256init" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: sha256init'
+09:29:58: DEBUG: XML FILE (87 bytes): CharsInBuffer=1873-87=1786
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: sha256final" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: sha256final'
+09:29:58: DEBUG: XML FILE (87 bytes): CharsInBuffer=1786-87=1699
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: programcust" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: programcust'
+09:29:58: DEBUG: XML FILE (90 bytes): CharsInBuffer=1699-90=1609
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: erasebackupgpt" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: erasebackupgpt'
+09:29:58: DEBUG: XML FILE (89 bytes): CharsInBuffer=1609-89=1520
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: eraseuserdata" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: eraseuserdata'
+09:29:58: DEBUG: XML FILE (80 bytes): CharsInBuffer=1520-80=1440
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: move" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: move'
+09:29:58: DEBUG: XML FILE (87 bytes): CharsInBuffer=1440-87=1353
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: getsigndata" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: getsigndata'
+09:29:58: DEBUG: XML FILE (82 bytes): CharsInBuffer=1353-82=1271
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: verify" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: verify'
+09:29:58: DEBUG: XML FILE (84 bytes): CharsInBuffer=1271-84=1187
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: writever" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: writever'
+09:29:58: DEBUG: XML FILE (89 bytes): CharsInBuffer=1187-89=1098
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: writelockdata" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: writelockdata'
+09:29:58: DEBUG: XML FILE (88 bytes): CharsInBuffer=1098-88=1010
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: getbasicdata" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: getbasicdata'
+09:29:58: DEBUG: XML FILE (88 bytes): CharsInBuffer=1010-88=922
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: writecdtdata" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: writecdtdata'
+09:29:58: DEBUG: XML FILE (87 bytes): CharsInBuffer=922-87=835
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: resetdigest" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: resetdigest'
+09:29:58: DEBUG: XML FILE (87 bytes): CharsInBuffer=835-87=748
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: transfercfg" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: transfercfg'
+09:29:58: DEBUG: XML FILE (105 bytes): CharsInBuffer=748-105=643
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: End of supported functions 29" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: End of supported functions 29'
+09:29:58: DEBUG: XML FILE (103 bytes): CharsInBuffer=643-103=540
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: devprg_spmi_init: success:0" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: devprg_spmi_init: success:0'
+09:29:58: DEBUG: XML FILE (110 bytes): CharsInBuffer=540-110=430
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="ERROR: 0x2646 SpmiBus_ReadLong: fail:0x0" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'ERROR: 0x2646 SpmiBus_ReadLong: fail:0x0'
+09:29:58: DEBUG: XML FILE (94 bytes): CharsInBuffer=430-94=336
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: 0x2646 r_data: 0x0" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: 0x2646 r_data: 0x0'
+09:29:58: DEBUG: XML FILE (94 bytes): CharsInBuffer=336-94=242
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: 0x2640 r_data: 0x0" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: 0x2640 r_data: 0x0'
+09:29:58: DEBUG: XML FILE (108 bytes): CharsInBuffer=242-108=134
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="ERROR: devprg_pm_charger_set error 28
+" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'ERROR: devprg_pm_charger_set error 28
+'
+09:29:58: DEBUG: XML FILE (134 bytes): CharsInBuffer=134-134=0
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: VIP is enabled, receiving the partition info of size 36864" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: VIP is enabled, receiving the partition info of size 36864'
+09:29:58: DEBUG: CharsInBuffer=0 Trying to read from USB 8192 bytes
+09:29:58: DEBUG: CHANNEL DATA (212 bytes) <-- TARGET to HOST
+09:29:58: DEBUG: CharsInBuffer = 212
+09:29:58: DEBUG: printBuffer:6017 PRETTYPRINT Buffer is 212 bytes
+
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 70 61 72 74 69 74 69 6F 6E 5F 6E 75 6D 3D 31  partition_num=1
+09:29:58: DEBUG: printBuffer:6094 38 34 2C 20 70 61 72 74 69 74 69 6F 6E 5F 69 6E 84, partition_in
+09:29:58: DEBUG: printBuffer:6094 66 6F 5F 73 69 7A 65 3D 31 33 32 22 20 2F 3E 3C fo_size=132" /><
+09:29:58: DEBUG: printBuffer:6094 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 65 72 73 /data><?xml vers
+09:29:58: DEBUG: printBuffer:6094 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 6F 64 69 ion="1.0" encodi
+09:29:58: DEBUG: printBuffer:6094 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E 0A 3C 64 ng="UTF-8" ?>.<d
+09:29:58: DEBUG: printBuffer:6094 61 74 61 3E 0A 3C 72 65 73 70 6F 6E 73 65 20 76 ata>.<response v
+09:29:58: DEBUG: printBuffer:6094 61 6C 75 65 3D 22 41 43 4B 22 20 72 61 77 6D 6F alue="ACK" rawmo
+09:29:58: DEBUG: printBuffer:6094 64 65 3D 22 66 61 6C 73 65 22 20 2F 3E 3C 2F 64 de="false" /></d
+09:29:58: DEBUG: printBuffer:6094 61 74 61 3E                                     ata>
+09:29:58: DEBUG: printBuffer:6107 
+
+
+09:29:58: DEBUG: XML FILE (118 bytes): CharsInBuffer=212-118=94
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: partition_num=184, partition_info_size=132" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: partition_num=184, partition_info_size=132'
+09:29:58: DEBUG: XML FILE (94 bytes): CharsInBuffer=94-94=0
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<response value="ACK" rawmode="false" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: DEBUG: Response was 'ACK'
+09:29:58: DEBUG: Got the ACK
+09:29:58: INFO: 	 _____ _                   _                  
+09:29:58: INFO: 	/  ___(_)                 | |                 
+09:29:58: INFO: 	\ `--. _  __ _ _ __   __ _| |_ _   _ _ __ ___ 
+09:29:58: INFO: 	 `--. \ |/ _` | '_ \ / _` | __| | | | '__/ _ \
+09:29:58: INFO: 	/\__/ / | (_| | | | | (_| | |_| |_| | | |  __/
+09:29:58: INFO: 	\____/|_|\__, |_| |_|\__,_|\__|\__,_|_|  \___|
+09:29:58: INFO: 	          __/ |                               
+09:29:58: INFO: 	         |___/   
+
+09:29:58: INFO: 	______                      _ 
+09:29:58: INFO: 	| ___ \                    | |
+09:29:58: INFO: 	| |_/ /_ _ ___ ___  ___  __| |
+09:29:58: INFO: 	|  __/ _` / __/ __|/ _ \/ _` |
+09:29:58: INFO: 	| | | (_| \__ \__ \  __/ (_| |
+09:29:58: INFO: 	\_|  \__,_|___/___/\___|\__,_|
+
+09:29:58: DEBUG: FIREHOSE: Signed DIGEST sent. This is not counted towards command sent
+09:29:58: DEBUG: FIREHOSE: PacketsSent reset to 0
+09:29:58: INFO: Sending <configure>
+09:29:58: DEBUG: CHANNEL DATA (P0000) (H00202) (    227 bytes) - HOST TO TARGET --> SHA256 DIGEST: 1C83C0A81884E2F9A0203BD1EABDC24F365C71EEF9229C6D45C6BA801DE83FD6
+===========================================================================================================
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<configure MemoryName="ufs" Verbose="0" AlwaysValidate="1" MaxDigestTableSizeInBytes="8192" MaxPayloadSizeToTargetInBytes="1048576" ZlpAwareHost="1" SkipStorageInit="0" />
+</data>
+
+============================================================================================================
+
+09:29:58: INFO: Trying to write 227 bytes
+09:29:58: INFO: Just wrote 227 bytes
+09:29:58: DEBUG: CharsInBuffer=0 Trying to read from USB 8192 bytes
+09:29:58: DEBUG: CHANNEL DATA (105 bytes) <-- TARGET to HOST
+09:29:58: DEBUG: CharsInBuffer = 105
+09:29:58: DEBUG: printBuffer:6017 PRETTYPRINT Buffer is 105 bytes
+
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 43 61 6C 6C 69 6E 67 20 68 61 6E 64 6C 65 72  Calling handler
+09:29:58: DEBUG: printBuffer:6094 20 66 6F 72 20 63 6F 6E 66 69 67 75 72 65 22 20  for configure" 
+09:29:58: DEBUG: printBuffer:6094 2F 3E 3C 2F 64 61 74 61 3E                      /></data>
+09:29:58: DEBUG: printBuffer:6107 
+
+
+09:29:58: DEBUG: XML FILE (105 bytes): CharsInBuffer=105-105=0
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Calling handler for configure" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+09:29:58: DEBUG: CharsInBuffer=0 Trying to read from USB 8192 bytes
+09:29:58: DEBUG: CHANNEL DATA (482 bytes) <-- TARGET to HOST
+09:29:58: DEBUG: CharsInBuffer = 482
+09:29:58: DEBUG: printBuffer:6017 PRETTYPRINT Buffer is 482 bytes
+
+09:29:58: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:29:58: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:29:58: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:29:58: DEBUG: printBuffer:6094 6C 6F 67 20 76 61 6C 75 65 3D 22 49 4E 46 4F 3A log value="INFO:
+09:29:58: DEBUG: printBuffer:6094 20 53 74 6F 72 61 67 65 20 74 79 70 65 20 73 65  Storage type se
+09:29:58: DEBUG: printBuffer:6094 74 20 74 6F 20 76 61 6C 75 65 20 55 46 53 22 20 t to value UFS" 
+09:29:58: DEBUG: printBuffer:6094 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C 20 76 /></data><?xml v
+09:29:58: DEBUG: printBuffer:6094 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65 6E 63 ersion="1.0" enc
+09:29:58: DEBUG: printBuffer:6094 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 3F 3E oding="UTF-8" ?>
+09:29:58: DEBUG: printBuffer:6094 0A 3C 64 61 74 61 3E 0A 3C 6C 6F 67 20 76 61 6C .<data>.<log val
+09:29:58: DEBUG: printBuffer:6094 75 65 3D 22 49 4E 46 4F 3A 20 45 6E 61 62 6C 65 ue="INFO: Enable
+09:29:58: DEBUG: printBuffer:6094 46 6C 61 73 68 20 6E 6F 74 20 66 6F 75 6E 64 2E Flash not found.
+09:29:58: DEBUG: printBuffer:6094 22 20 2F 3E 3C 2F 64 61 74 61 3E 3C 3F 78 6D 6C " /></data><?xml
+09:29:58: DEBUG: printBuffer:6094 20 76 65 72 73 69 6F 6E 3D 22 31 2E 30 22 20 65  version="1.0" e
+09:29:58: DEBUG: printBuffer:6094 6E 63 6F 64 69 6E 67 3D 22 55 54 46 2D 38 22 20 ncoding="UTF-8" 
+09:29:58: DEBUG: printBuffer:6094 3F 3E 0A 3C 64 61 74 61 3E 0A 3C 72 65 73 70 6F ?>.<data>.<respo
+09:29:58: DEBUG: printBuffer:6094 6E 73 65 20 76 61 6C 75 65 3D 22 41 43 4B 22 20 nse value="ACK" 
+09:29:58: DEBUG: printBuffer:6094 4D 65 6D 6F 72 79 4E 61 6D 65 3D 22 55 46 53 22 MemoryName="UFS"
+09:29:58: DEBUG: printBuffer:6094 20 4D 69 6E 56 65 72 73 69 6F 6E 53 75 70 70 6F  MinVersionSuppo
+09:29:58: DEBUG: printBuffer:6094 72 74 65 64 3D 22 31 22 20 56 65 72 73 69 6F 6E rted="1" Version
+09:29:58: DEBUG: printBuffer:6094 3D 22 31 22 20 4D 61 78 50 61 79 6C 6F 61 64 53 ="1" MaxPayloadS
+09:29:58: DEBUG: printBuffer:6094 69 7A 65 54 6F 54 61 72 67 65 74 49 6E 42 79 74 izeToTargetInByt
+09:29:58: DEBUG: printBuffer:6094 65 73 3D 22 31 30 34 38 35 37 36 22 20 4D 61 78 es="1048576" Max
+09:29:58: DEBUG: printBuffer:6094 50 61 79 6C 6F 61 64 53 69 7A 65 54 6F 54 61 72 PayloadSizeToTar
+09:29:58: DEBUG: printBuffer:6094 67 65 74 49 6E 42 79 74 65 73 53 75 70 70 6F 72 getInBytesSuppor
+09:29:58: DEBUG: printBuffer:6094 74 65 64 3D 22 31 30 34 38 35 37 36 22 20 4D 61 ted="1048576" Ma
+09:29:58: DEBUG: printBuffer:6094 78 58 4D 4C 53 69 7A 65 49 6E 42 79 74 65 73 3D xXMLSizeInBytes=
+09:29:58: DEBUG: printBuffer:6094 22 34 30 39 36 22 20 44 61 74 65 54 69 6D 65 3D "4096" DateTime=
+09:29:58: DEBUG: printBuffer:6094 22 4E 6F 76 20 32 35 20 32 30 32 32 20 2D 20 31 "Nov 25 2022 - 1
+09:29:58: DEBUG: printBuffer:6094 37 3A 31 33 3A 33 36 22 20 2F 3E 3C 2F 64 61 74 7:13:36" /></dat
+09:29:58: DEBUG: printBuffer:6094 61 3E                                           a>
+09:29:58: DEBUG: printBuffer:6107 
+
+
+09:29:58: DEBUG: XML FILE (105 bytes): CharsInBuffer=482-105=377
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: Storage type set to value UFS" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+09:29:58: DEBUG: XML FILE (98 bytes): CharsInBuffer=377-98=279
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="INFO: EnableFlash not found." /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: INFO: TARGET SAID: 'INFO: EnableFlash not found.'
+09:29:58: DEBUG: XML FILE (279 bytes): CharsInBuffer=279-279=0
+-------------------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<response value="ACK" MemoryName="UFS" MinVersionSupported="1" Version="1" MaxPayloadSizeToTargetInBytes="1048576" MaxPayloadSizeToTargetInBytesSupported="1048576" MaxXMLSizeInBytes="4096" DateTime="Nov 25 2022 - 17:13:36" /></data>
+-------------------------------------------------------------------------------------------
+
+09:29:58: DEBUG: Response was 'ACK'
+09:29:58: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+09:29:58: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+09:29:58: DEBUG: Got the ACK for the <configure>
+09:29:58: INFO: ==============================================================
+09:29:58: INFO: Files used and their paths
+09:29:58: INFO:   1 '/ssd1/oneplus-12r/1a-EDL-exploits-8g2/oplus_8g2/port_trace.txt'
+09:29:58: INFO:   2 '/ssd1/oneplus-12r/1a-EDL-exploits-8g2/oplus_8g2/Digest.mbn'
+09:29:58: INFO:      _             (done)
+09:29:58: INFO:     | |                 
+09:29:58: INFO:   __| | ___  _ __   ___ 
+09:29:58: INFO:  / _` |/ _ \| '_ \ / _ \
+09:29:58: INFO: | (_| | (_) | | | |  __/
+09:29:58: INFO:  \__,_|\___/|_| |_|\___|
+09:29:58: INFO: {All Finished Successfully}
+
+09:29:58: INFO: Overall to target  0.023 seconds (0.00 Bps)

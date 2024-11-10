@@ -1,0 +1,64 @@
+Using loader prog_firehose_ddr.elf ...
+Waiting for the device
+Device detected :)
+Mode detected: firehose
+Trying to connect to firehose loader ...
+INFO: Binary build date: Nov 25 2022 @ 17:13:36 
+INFO: Function Version: V1.1 
+INFO: Chip serial num (0xd3e4b740) Chip ID (0x0)
+INFO: Supported Functions (29):
+INFO: program
+INFO: read
+INFO: nop
+INFO: patch
+INFO: configure
+INFO: setbootablestoragedrive
+INFO: erase
+INFO: power
+INFO: firmwarewrite
+INFO: getstorageinfo
+INFO: benchmark
+INFO: emmc
+INFO: ufs
+INFO: fixgpt
+INFO: getsha256digest
+INFO: sha256init
+INFO: sha256final
+INFO: programcust
+INFO: erasebackupgpt
+INFO: eraseuserdata
+INFO: move
+INFO: getsigndata
+INFO: verify
+INFO: writever
+INFO: writelockdata
+INFO: getbasicdata
+INFO: writecdtdata
+INFO: resetdigest
+INFO: transfercfg
+INFO: End of supported functions 29
+Couldn't detect MaxPayloadSizeFromTargetinBytes
+Couldn't detect TargetName
+Using dummy VIP signature, if this doesn't work, you need to put base64 string from /api/tools/sign Oppo API into prog_firehose_ddr.sig
+
+Nop succeeded.
+TargetName=Unknown
+MemoryName=UFS
+Version=1
+Trying to read first storage sector...
+Running configure...
+Storage report:
+total_blocks:61332480
+block_size:4096
+page_size:4096
+num_physical:6
+manufacturer_id:462
+serial_num:1297306958
+fw_version:901
+mem_type:UFS
+prod_name:KLUEG4RHGB-B0E1
+Supported functions:
+-----------------
+program,read,nop,patch,configure,setbootablestoragedrive,erase,power,firmwarewrite,getstorageinfo,benchmark,emmc,ufs,fixgpt,getsha256digest,sha256init,sha256final,programcust,erasebackupgpt,eraseuserdata,move,getsigndata,verify,writever,writelockdata,getbasicdata,writecdtdata,resetdigest,transfercfg,devprg_spmi_init: success:0,ERROR: 0x2646 SpmiBus_ReadLong: fail:0x0,0x2646 r_data: 0x0,0x2640 r_data: 0x0,ERROR: devprg_pm_charger_set error 28 ,VIP is enabled, receiving the partition info of size 36864
+
+Writing to physical partition 4, sector 81414, sectors 303

@@ -1,0 +1,3 @@
+/ssd1/oneplus-12r/BOOT.XF.3.3/QcomPkg/Tools/storage/fh_loader/QSaharaServer/src/build/CMakeFiles/QSaharaServer.dir
+/ssd1/oneplus-12r/BOOT.XF.3.3/QcomPkg/Tools/storage/fh_loader/QSaharaServer/src/build/CMakeFiles/edit_cache.dir
+/ssd1/oneplus-12r/BOOT.XF.3.3/QcomPkg/Tools/storage/fh_loader/QSaharaServer/src/build/CMakeFiles/rebuild_cache.dir

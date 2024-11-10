@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<nop value="ping" />
+<transfercfg reboot_type="off" timeout_in_sec="90" />
+<configure ZlpAwareHost="1" MaxPayloadSizeToTargetInBytes="1048576" AckRawDataEveryNumPackets="1000" SkipWrite="0" Verbose="0" MaxDigestTableSizeInBytes="8192" AlwaysValidate="0" MemoryName="ufs" SkipStorageInit="0" EnableFlash="0" />
+<getsigndata value="ping" />
+<verify value="ping"  EnableVip="1"/>
+</data>

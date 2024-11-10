@@ -1,0 +1,119 @@
+
+09:53:34: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+../bin/fh_loader --port=/dev/ttyUSB0 --sendimage=prog_firehose_ddr.elf --search_path=./ --loglevel=3 
+************************************************
+
+09:53:34: DEBUG: Binary build date: Sep 14 2024 @ 14:41:00
+
+09:53:34: DEBUG: Build Version: 24.09.14.14.41.00
+
+09:53:34: INFO: Current working dir (cwd): /ssd1/oneplus-12r/fh_loader/
+09:53:34: INFO: Showing network mappings to allow debugging
+09:53:34: INFO: './' changed to
+09:53:34: INFO: this '/ssd1/oneplus-12r/fh_loader/./'
+09:53:34: INFO: User requested *super verbose* logging with --loglevel=3
+09:53:34: DEBUG: ==================================================================================
+09:53:34: DEBUG: ==================================================================================
+09:53:34: INFO: Looking for file 'prog_firehose_ddr.elf'
+09:53:34: DEBUG: 1. Calling stat('/ssd1/oneplus-12r/fh_loader/./prog_firehose_ddr.elf')
+09:53:34: DEBUG: 2. Calling fopen('/ssd1/oneplus-12r/fh_loader/./prog_firehose_ddr.elf') with AccessMode='rb'
+09:53:34: DEBUG: Trying get filesize, calling fseek()
+09:53:34: DEBUG: Found '/ssd1/oneplus-12r/fh_loader/./prog_firehose_ddr.elf' (1719140 bytes)
+09:53:34: DEBUG: File size is 1719140 bytes
+09:53:34: DEBUG: NumSectors needed 3358
+09:53:34: DEBUG: 2. Calling fopen('/ssd1/oneplus-12r/fh_loader/./prog_firehose_ddr.elf') with AccessMode='rb'
+09:53:34: INFO: User wants to talk to port '/dev/ttyUSB0'
+09:53:34: DEBUG: port_fd=0x5
+
+09:53:34: INFO: Took       0.00009900 seconds to open port
+09:53:34: DEBUG: 2. Calling fopen('command_trace.txt') with AccessMode='w'
+09:53:34: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+09:53:34: INFO: Sending <configure>
+09:53:34: DEBUG: CHANNEL DATA (P0000) (H00202) (    228 bytes) - HOST TO TARGET -->
+===========================================================================================================
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<configure MemoryName="eMMC" Verbose="0" AlwaysValidate="0" MaxDigestTableSizeInBytes="8192" MaxPayloadSizeToTargetInBytes="1048576" ZlpAwareHost="0" SkipStorageInit="0" />
+</data>
+
+============================================================================================================
+
+09:53:34: DEBUG: printBuffer:6017 PRETTYPRINT Buffer is 228 bytes
+
+09:53:34: DEBUG: printBuffer:6094 3C 3F 78 6D 6C 20 76 65 72 73 69 6F 6E 3D 22 31 <?xml version="1
+09:53:34: DEBUG: printBuffer:6094 2E 30 22 20 65 6E 63 6F 64 69 6E 67 3D 22 55 54 .0" encoding="UT
+09:53:34: DEBUG: printBuffer:6094 46 2D 38 22 20 3F 3E 0A 3C 64 61 74 61 3E 0A 3C F-8" ?>.<data>.<
+09:53:34: DEBUG: printBuffer:6094 63 6F 6E 66 69 67 75 72 65 20 4D 65 6D 6F 72 79 configure Memory
+09:53:34: DEBUG: printBuffer:6094 4E 61 6D 65 3D 22 65 4D 4D 43 22 20 56 65 72 62 Name="eMMC" Verb
+09:53:34: DEBUG: printBuffer:6094 6F 73 65 3D 22 30 22 20 41 6C 77 61 79 73 56 61 ose="0" AlwaysVa
+09:53:34: DEBUG: printBuffer:6094 6C 69 64 61 74 65 3D 22 30 22 20 4D 61 78 44 69 lidate="0" MaxDi
+09:53:34: DEBUG: printBuffer:6094 67 65 73 74 54 61 62 6C 65 53 69 7A 65 49 6E 42 gestTableSizeInB
+09:53:34: DEBUG: printBuffer:6094 79 74 65 73 3D 22 38 31 39 32 22 20 4D 61 78 50 ytes="8192" MaxP
+09:53:34: DEBUG: printBuffer:6094 61 79 6C 6F 61 64 53 69 7A 65 54 6F 54 61 72 67 ayloadSizeToTarg
+09:53:34: DEBUG: printBuffer:6094 65 74 49 6E 42 79 74 65 73 3D 22 31 30 34 38 35 etInBytes="10485
+09:53:34: DEBUG: printBuffer:6094 37 36 22 20 5A 6C 70 41 77 61 72 65 48 6F 73 74 76" ZlpAwareHost
+09:53:34: DEBUG: printBuffer:6094 3D 22 30 22 20 53 6B 69 70 53 74 6F 72 61 67 65 ="0" SkipStorage
+09:53:34: DEBUG: printBuffer:6094 49 6E 69 74 3D 22 30 22 20 2F 3E 0A 3C 2F 64 61 Init="0" />.</da
+09:53:34: DEBUG: printBuffer:6094 74 61 3E 0A                                     ta>.
+09:53:34: DEBUG: printBuffer:6107 
+
+
+09:53:34: INFO: Trying to write 228 bytes
+09:53:34: INFO: Just wrote 228 bytes
+09:53:34: DEBUG: CharsInBuffer=0 Trying to read from USB 8192 bytes
+09:53:34: DEBUG: CHANNEL DATA (64 bytes) <-- TARGET to HOST
+09:53:34: DEBUG: CharsInBuffer = 64
+09:53:34: DEBUG: printBuffer:6017 PRETTYPRINT Buffer is 64 bytes
+
+09:53:34: DEBUG: printBuffer:6094 01 00 00 00 30 00 00 00 03 00 00 00 01 00 00 00 ....0...........
+09:53:34: DEBUG: printBuffer:6094 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+09:53:34: DEBUG: printBuffer:6094 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+09:53:34: DEBUG: printBuffer:6094 04 00 00 00 10 00 00 00 0D 00 00 00 01 00 00 00 ................
+09:53:34: DEBUG: printBuffer:6107 
+
+
+
+
+	 _____                    
+	|  ___|                   
+	| |__ _ __ _ __ ___  _ __ 
+	|  __| '__| '__/ _ \| '__|
+	| |__| |  | | | (_) | |   
+	\____/_|  |_|  \___/|_|  
+
+
+09:53:34: {ERROR: DetermineTag:6861 XML not formed correctly. Expected a &lt; character at loc 0
+
+
+	 _____                    
+	|  ___|                   
+	| |__ _ __ _ __ ___  _ __ 
+	|  __| '__| '__/ _ \| '__|
+	| |__| |  | | | (_) | |   
+	\____/_|  |_|  \___/|_|  
+
+
+09:53:34: {ERROR: GetNextPacket:7935 3. TAG not found or recognized
+
+
+	 _____                    
+	|  ___|                   
+	| |__ _ __ _ __ ___  _ __ 
+	|  __| '__| '__/ _ \| '__|
+	| |__| |  | | | (_) | |   
+	\____/_|  |_|  \___/|_|  
+
+
+09:53:34: {ERROR: GetNextPacket:7939 
+
+	There is a chance your target is in SAHARA mode!!
+	There is a chance your target is in SAHARA mode!!
+	There is a chance your target is in SAHARA mode!!
+
+This can mean
+	1. You forgot to send DeviceProgrammer first (i.e. QSaharaServer.exe -s 13:prog_emmc_firehose_8994_lite.mbn)
+	2. OR, you did send DeviceProgrammer, but it has crashed and/or is not correct for this target
+
+Regardless this program speaks FIREHOSE protocol and your target is speaking SAHARA protcol, so this will not work
+

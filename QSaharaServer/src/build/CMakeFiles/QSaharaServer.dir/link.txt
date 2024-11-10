@@ -1,0 +1,1 @@
+/usr/bin/cc -g -rdynamic CMakeFiles/QSaharaServer.dir/kickstart.c.o CMakeFiles/QSaharaServer.dir/sahara_protocol.c.o CMakeFiles/QSaharaServer.dir/comm.c.o CMakeFiles/QSaharaServer.dir/external_utils.c.o CMakeFiles/QSaharaServer.dir/kickstart_log.c.o CMakeFiles/QSaharaServer.dir/kickstart_utils.c.o -o QSaharaServer 
