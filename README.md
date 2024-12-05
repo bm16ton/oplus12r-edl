@@ -28,3 +28,7 @@ touch logs/log.txt
 ./edl printgpt --memory=ufs --lun=0 --loader=prog_firehose_ddr.elf
 ./edl w bluetooth_a /media/maddocks/ffa2be2d-c02e-44df-9238-e8598c6db2e3/payload-extract/bluetooth.img  --memory=ufs --lun=4  --loader=prog_firehose_ddr.elf --debugmode
 ```
+I also wanted to see if any modified/unsigned images would flash via edl this way. So I flashed a modified boot_init and it worked.
+```
+./edl w init_boot_a $(pwd)/init_boot_current.img  --memory=ufs --lun=4  --loader=prog_firehose_ddr.elf --debugmode
+```
