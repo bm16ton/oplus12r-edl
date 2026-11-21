@@ -1,4 +1,4 @@
-Using loader prog_firehose_ddr.elf ...
+Trying with no loader given ...
 Waiting for the device
 Device detected :)
 Mode detected: firehose
@@ -37,6 +37,7 @@ INFO: writecdtdata
 INFO: resetdigest
 INFO: transfercfg
 INFO: End of supported functions 29
+No --memory option set, we assume "UFS" as default ..., if it fails, try using "--memory" with "UFS","NAND" or "spinor" instead !
 Couldn't detect MaxPayloadSizeFromTargetinBytes
 Couldn't detect TargetName
 Using dummy VIP signature, if this doesn't work, you need to put base64 string from /api/tools/sign Oppo API into prog_firehose_ddr.sig
@@ -59,6 +60,4 @@ mem_type:UFS
 prod_name:KLUEG4RHGB-B0E1
 Supported functions:
 -----------------
-program,read,nop,patch,configure,setbootablestoragedrive,erase,power,firmwarewrite,getstorageinfo,benchmark,emmc,ufs,fixgpt,getsha256digest,sha256init,sha256final,programcust,erasebackupgpt,eraseuserdata,move,getsigndata,verify,writever,writelockdata,getbasicdata,writecdtdata,resetdigest,transfercfg,devprg_spmi_init: success:0,ERROR: 0x2646 SpmiBus_ReadLong: fail:0x0,0x2646 r_data: 0x0,0x2640 r_data: 0x0,ERROR: devprg_pm_charger_set error 28 ,VIP is enabled, receiving the partition info of size 36864
-
-Writing to physical partition 4, sector 81414, sectors 303
+program,read,nop,patch,configure,setbootablestoragedrive,erase,power,firmwarewrite,getstorageinfo,benchmark,emmc,ufs,fixgpt,getsha256digest,sha256init,sha256final,programcust,erasebackupgpt,eraseuserdata,move,getsigndata,verify,writever,writelockdata,getbasicdata,writecdtdata,resetdigest,transfercfg

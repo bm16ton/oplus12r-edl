@@ -1,0 +1,772 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# (c) B.Kerler 2018-2024 under GPLv3 license
+# If you use my code, make sure you refer to my name
+#
+# !!!!! If you use this code in commercial products, your product is automatically
+# GPLv3 and has to be open sourced under GPLv3 as well. !!!!!
+import inspect
+import logging
+import os
+import sys
+import time
+from struct import pack
+
+current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+from edlclient.Library.utils import print_progress, rmrf, LogBase
+from edlclient.Config.qualcomm_config import msmids, root_cert_hash
+from edlclient.Library.loader_db import loader_utils
+from edlclient.Library.sahara_defs import ErrorDesc, cmd_t, exec_cmd_t, sahara_mode_t, status_t, \
+    CommandHandler
+from edlclient.Library.xmlparser import xmlparser
+
+
+class sahara(metaclass=LogBase):
+    def __init__(self, cdc, loglevel):
+        self.cdc = cdc
+        self.__logger = self.__logger
+        self.info = self.__logger.info
+        self.debug = self.__logger.debug
+        self.error = self.__logger.error
+        self.warning = self.__logger.warning
+        self.id = None
+        self.version = 2.1
+        self.programmer = None
+        self.mode = ""
+        self.serial = None
+
+        self.serials = None
+        self.sblversion = None
+        self.hwid = None
+        self.pkhash = None
+        self.hwidstr = None
+        self.msm_id = None
+        self.oem_id = None
+        self.model_id = None
+        self.oem_str = None
+        self.msm_str = None
+        self.bit64 = False
+        self.pktsize = None
+        self.ch = CommandHandler()
+        self.xml = xmlparser()
+        self.loader_handler = loader_utils(loglevel=loglevel)
+        self.loaderdb = self.loader_handler.init_loader_db()
+
+        self.__logger.setLevel(loglevel)
+        if loglevel == logging.DEBUG:
+            logfilename = "log.txt"
+            fh = logging.FileHandler(logfilename)
+            self.__logger.addHandler(fh)
+
+    def get_error_desc(self, status):
+        if status in ErrorDesc:
+            return "Error: " + ErrorDesc[status]
+        else:
+            return "Unknown error: " + hex(status)
+
+    def get_rsp(self):
+        try:
+            data = self.cdc.read()
+            if data == b'':
+                return {}
+            if b"<?xml" in data:
+                return {"firehose": "yes"}
+            pkt = self.ch.pkt_cmd_hdr(data)
+            if pkt.cmd == cmd_t.SAHARA_HELLO_REQ:
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_hello_req(data)}
+            elif pkt.cmd == cmd_t.SAHARA_DONE_RSP:
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_done(data)}
+            elif pkt.cmd == cmd_t.SAHARA_END_TRANSFER:
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_image_end(data)}
+            elif pkt.cmd == cmd_t.SAHARA_64BIT_MEMORY_READ_DATA:
+                self.bit64 = True
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_read_data_64(data)}
+            elif pkt.cmd == cmd_t.SAHARA_READ_DATA:
+                self.bit64 = False
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_read_data(data)}
+            elif pkt.cmd == cmd_t.SAHARA_64BIT_MEMORY_DEBUG:
+                self.bit64 = True
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_memory_debug_64(data)}
+            elif pkt.cmd == cmd_t.SAHARA_MEMORY_DEBUG:
+                self.bit64 = False
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_memory_debug(data)}
+            elif pkt.cmd == cmd_t.SAHARA_EXECUTE_RSP:
+                return {"cmd": pkt.cmd, "data": self.ch.pkt_execute_rsp_cmd(data)}
+            elif pkt.cmd == cmd_t.SAHARA_CMD_READY or pkt.cmd == cmd_t.SAHARA_RESET_RSP:
+                return {"cmd": pkt.cmd, "data": None}
+            return {}
+        except Exception as e:  # pylint: disable=broad-except
+            self.error(str(e))
+            return {}
+
+    def cmd_hello(self, mode, version_min=1, max_cmd_len=0, version=2):  # CMD 0x1, RSP 0x2
+        cmd = cmd_t.SAHARA_HELLO_RSP
+        length = 0x30
+        #version = SAHARA_VERSION
+        responsedata = pack("<IIIIIIIIIIII", cmd, length, version, version_min, max_cmd_len, mode, 1, 2, 3, 4, 5, 6)
+        try:
+            self.cdc.write(responsedata)
+            return True
+        except Exception as e:  # pylint: disable=broad-except
+            self.error(str(e))
+            return False
+
+    def connect(self):
+        try:
+            v = self.cdc.read(length=0xC * 0x4, timeout=1)
+            if len(v) > 1:
+                if v[0] == 0x01:
+                    pkt = self.ch.pkt_cmd_hdr(v)
+                    if pkt.cmd == cmd_t.SAHARA_HELLO_REQ:
+                        rsp = self.ch.pkt_hello_req(v)
+                        self.pktsize = rsp.cmd_packet_length
+                        self.version = rsp.version
+                        self.info(f"Protocol version: {rsp.version}, Version supported: {rsp.version_supported}")
+                        return {"mode": "sahara", "cmd": cmd_t.SAHARA_HELLO_REQ, "data": rsp}
+                    elif pkt.cmd == cmd_t.SAHARA_END_TRANSFER:
+                        rsp = self.ch.pkt_image_end(v)
+                        return {"mode": "sahara", "cmd": cmd_t.SAHARA_END_TRANSFER, "data": rsp}
+                elif b"<?xml" in v:
+                    return {"mode": "firehose"}
+                elif v[0] == 0x7E:
+                    return {"mode": "nandprg"}
+            else:
+                data = b"<?xml version=\"1.0\" ?><data><nop /></data>"
+                self.cdc.write(data)
+                res = self.cdc.read(timeout=1)
+                if b"<?xml" in res:
+                    return {"mode": "firehose"}
+                elif len(res) > 0:
+                    if res[0] == 0x7E:
+                        return {"mode": "nandprg"}
+                    elif res[0] == cmd_t.SAHARA_END_TRANSFER:
+                        rsp = self.ch.pkt_image_end(res)
+                        return {"mode": "sahara", "cmd": cmd_t.SAHARA_END_TRANSFER, "data": rsp}
+                elif res == b"":
+                    data = b"\x7E\x11\x00\x12\x00\xA0\xE3\x00\x00\xC1\xE5\x01\x40\xA0\xE3\x1E\xFF\x2F\xE1\x4B\xD9\x7E"
+                    self.cdc.write(data)
+                    res = self.cdc.read()
+                    if len(res) > 0 and res[1] == 0x12:
+                        return {"mode": "nandprg"}
+                    elif len(res) == 0:
+                        print("Device is in Sahara error state, please reboot the device.")
+                        return {"mode": "error"}
+
+        except Exception as e:  # pylint: disable=broad-except
+            self.error(str(e))
+        return {"mode": "error"}
+
+    def enter_command_mode(self, version=2):
+        if not self.cmd_hello(sahara_mode_t.SAHARA_MODE_COMMAND, version=version):
+            return False
+        res = self.get_rsp()
+        if "cmd" in res:
+            if res["cmd"] == cmd_t.SAHARA_END_TRANSFER:
+                if "data" in res:
+                    pkt = res["data"]
+                    self.error(self.get_error_desc(pkt.image_tx_status))
+                    return False
+            elif res["cmd"] == cmd_t.SAHARA_CMD_READY:
+                return True
+        return False
+
+    def cmdexec_nop(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_NOP)
+        return res
+
+    def cmdexec_get_serial_num(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_SERIAL_NUM_READ)
+        return int.from_bytes(res, 'little')
+
+    def cmdexec_get_msm_hwid(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_MSM_HW_ID_READ)
+        if res is not None:
+            return int.from_bytes(res[:8], 'little')
+        return None
+
+    def cmdexec_get_pkhash(self):
+        try:
+            res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_OEM_PK_HASH_READ)
+            idx = res[4:].find(res[:4])
+            if idx != -1:
+                res = res[:4 + idx]
+            return res.hex()
+        except Exception as e:  # pylint: disable=broad-except
+            self.error(str(e))
+            return None
+
+    def cmdexec_get_sbl_version(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_GET_SOFTWARE_VERSION_SBL)
+        return int.from_bytes(res, 'little')
+
+    def cmdexec_switch_to_dmss_dload(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_SWITCH_TO_DMSS_DLOAD)
+        return res
+
+    def cmdexec_switch_to_stream_dload(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_SWITCH_TO_STREAM_DLOAD)
+        return res
+
+    def cmdexec_read_debug_data(self):
+        res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_READ_DEBUG_DATA)
+        return res
+
+    def cmdexec_get_chip_id_v3(self):
+        """
+        Read extended chip information using cmd=0x0A (V3 devices)
+        
+        Data Structure (48+ bytes):
+        - Offset 0-3: Chip Identifier V3
+        - Offset 36-39: MSM_ID (4 bytes, little-endian)
+        - Offset 40-41: OEM_ID (2 bytes, little-endian)
+        - Offset 42-43: MODEL_ID (2 bytes, little-endian)
+        - Offset 44-45: Alternative OEM_ID (if offset 40 is 0)
+        """
+        try:
+            res = self.cmd_exec(exec_cmd_t.SAHARA_EXEC_CMD_READ_CHIP_ID_V3)
+            if res is None or len(res) < 44:
+                return None
+            
+            # Parse Chip Identifier V3 (offset 0-3)
+            chip_id_v3 = int.from_bytes(res[0:4], 'little')
+            
+            # Parse MSM_ID (offset 36-39)
+            msm_id = int.from_bytes(res[36:40], 'little')
+            
+            # Parse OEM_ID (offset 40-41)
+            oem_id = int.from_bytes(res[40:42], 'little')
+            
+            # Parse MODEL_ID (offset 42-43)
+            model_id = int.from_bytes(res[42:44], 'little')
+            
+            # If oem_id is 0, try alternative location (offset 44-45)
+            if oem_id == 0 and len(res) >= 46:
+                oem_id = int.from_bytes(res[44:46], 'little')
+            
+            return {
+                'chip_id_v3': chip_id_v3,
+                'msm_id': msm_id,
+                'oem_id': oem_id,
+                'model_id': model_id,
+                'raw_data': res
+            }
+        except Exception as e:
+            self.debug(f"cmdexec_get_chip_id_v3 error: {e}")
+            return None
+
+    def cmd_info(self, version):
+        if self.enter_command_mode(version=version):
+            self.serial = self.cmdexec_get_serial_num()
+            self.serials = "{:08x}".format(self.serial)
+            if version < 3:
+                self.hwid = self.cmdexec_get_msm_hwid()
+                self.pkhash = self.cmdexec_get_pkhash()
+                # if self.version>=2.4:
+                #    self.sblversion = "{:08x}".format(self.cmdexec_get_sbl_version())
+                if self.hwid is not None:
+                    self.hwidstr = "{:016x}".format(self.hwid)
+                    self.msm_id = int(self.hwidstr[2:8], 16)
+                    self.oem_id = int(self.hwidstr[-8:-4], 16)
+                    self.model_id = int(self.hwidstr[-4:], 16)
+                    self.oem_str = "{:04x}".format(self.oem_id)
+                    self.model_id = "{:04x}".format(self.model_id)
+                    self.msm_str = "{:08x}".format(self.msm_id)
+                    if self.msm_id in msmids:
+                        cpustr = f"CPU detected:      \"{msmids[self.msm_id]}\"\n"
+                    else:
+                        cpustr = "Unknown CPU, please send log as issue to https://github.com/bkerler/edl\n"
+                    """
+                    if self.version >= 2.4:
+                        self.info(f"\nVersion {hex(version)}\n------------------------\n" +
+                                    f"HWID:              0x{self.hwidstr} (MSM_ID:0x{self.msm_str}," +
+                                    f"OEM_ID:0x{self.oem_str}," +
+                                    f"MODEL_ID:0x{self.model_id})\n" +
+                                    f"PK_HASH:           0x{self.pkhash}\n" +
+                                    f"Serial:            0x{self.serials}\n" +
+                                    f"SBL Version:       0x{self.sblversion}\n")
+                    else:
+                    """
+                    self.info(f"\nVersion {hex(version)}\n------------------------\n" +
+                              f"HWID:              0x{self.hwidstr} (MSM_ID:0x{self.msm_str}," +
+                              f"OEM_ID:0x{self.oem_str}," +
+                              f"MODEL_ID:0x{self.model_id})\n" +
+                              cpustr +
+                              f"PK_HASH:           0x{self.pkhash}\n" +
+                              f"Serial:            0x{self.serials}\n")
+                if self.programmer == "":
+                    if self.hwidstr in self.loaderdb:
+                        mt = self.loaderdb[self.hwidstr]
+                        unfused = False
+                        for rootcert in root_cert_hash:
+                            if self.pkhash[0:16] in root_cert_hash[rootcert]:
+                                unfused = True
+                                break
+                        if unfused:
+                            self.info("Possibly unfused device detected, so any loader should be fine...")
+                            if self.pkhash[0:16] in mt:
+                                self.programmer = mt[self.pkhash[0:16]]
+                                self.info(f"Trying loader: {self.programmer}")
+                            else:
+                                for loader in mt:
+                                    self.programmer = mt[loader]
+                                    self.info(f"Possible loader available: {self.programmer}")
+                                for loader in mt:
+                                    self.programmer = mt[loader]
+                                    self.info(f"Trying loader: {self.programmer}")
+                                    break
+                        elif self.pkhash[0:16] in mt:
+                            self.programmer = self.loaderdb[self.hwidstr][self.pkhash[0:16]]
+                            self.info(f"Detected loader: {self.programmer}")
+                        else:
+                            for loader in self.loaderdb[self.hwidstr]:
+                                self.programmer = self.loaderdb[self.hwidstr][loader]
+                                self.info(f"Trying loader: {self.programmer}")
+                                break
+                            # print("Couldn't find a loader for given hwid and pkhash :(")
+                            # exit(0)
+                    elif self.hwidstr is not None and self.pkhash is not None:
+                        msmid = self.hwidstr[:8]
+                        found = False
+                        for hwidstr in self.loaderdb:
+                            if msmid == hwidstr[:8]:
+                                if self.pkhash[0:16] in self.loaderdb[hwidstr]:
+                                    self.programmer = self.loaderdb[hwidstr][self.pkhash[0:16]]
+                                    self.info(f"Found loader: {self.programmer}")
+                                    self.cmd_modeswitch(sahara_mode_t.SAHARA_MODE_COMMAND)
+                                    return True
+                            else:
+                                if self.pkhash[0:16] in self.loaderdb[hwidstr]:
+                                    self.programmer = self.loaderdb[hwidstr][self.pkhash[0:16]]
+                                    self.info(f"Found possible loader: {self.programmer}")
+                                    found = True
+                        if found:
+                            self.cmd_modeswitch(sahara_mode_t.SAHARA_MODE_COMMAND)
+                            return True
+                        else:
+                            self.error(
+                                f"Couldn't find a loader for given hwid and pkhash ({self.hwidstr}_{self.pkhash[0:16]}" +
+                                "_[FHPRG/ENPRG].bin) :(")
+                        return False
+                    else:
+                        self.error(f"Couldn't find a suitable loader :(")
+                        return False
+            else:
+                # V3: Try to read pkhash first (may still work on some devices)
+                self.pkhash = self.cmdexec_get_pkhash()
+                
+                # V3: Use cmd=0x0A to read extended chip info
+                v3_info = self.cmdexec_get_chip_id_v3()
+                if v3_info is not None:
+                    chip_id_v3 = v3_info['chip_id_v3']
+                    self.msm_id = v3_info['msm_id']
+                    self.oem_id = v3_info['oem_id']
+                    self.model_id = v3_info['model_id']
+                    self.msm_str = "{:06x}".format(self.msm_id)
+                    self.oem_str = "{:04x}".format(self.oem_id)
+                    model_str = "{:04x}".format(self.model_id)
+                    chip_id_v3_str = "{:08x}".format(chip_id_v3)
+                    # Construct HWID (compatible with V1/V2 format)
+                    self.hwidstr = "00{:06x}{:04x}{:04x}".format(self.msm_id, self.oem_id, self.model_id)
+                    self.hwid = int(self.hwidstr, 16)
+                    self.model_id = model_str
+                    
+                    # Get OEM name from msmids if available
+                    oem_name = ""
+                    if self.msm_id in msmids:
+                        oem_name = msmids[self.msm_id]
+                    
+                    # Build V3 format output
+                    self.info(f"\nReading Chip Info : OK")
+                    self.info(f"- Sahara version  : {version}")
+                    self.info(f"- Chip Serial Number : {self.serials}")
+                    self.info(f"- Chip Identifier V3 : {chip_id_v3_str}")
+                    if oem_name:
+                        self.info(f"- MSM HWID : 0x{self.msm_str} | model_id:0x{model_str} | oem_id:{self.oem_str} {oem_name}")
+                    else:
+                        self.info(f"- MSM HWID : 0x{self.msm_str} | model_id:0x{model_str} | oem_id:{self.oem_str}")
+                    if self.pkhash:
+                        self.info(f"- OEM PKHASH : {self.pkhash}")
+                    else:
+                        self.info(f"- OEM PKHASH : Not available (V3 restriction)")
+                    self.info(f"- HW_ID : {self.hwidstr}")
+                    
+                    # Try to find loader using V3 info
+                    if self.programmer == "":
+                        # First try exact match with pkhash if available
+                        if self.pkhash and self.hwidstr in self.loaderdb:
+                            mt = self.loaderdb[self.hwidstr]
+                            if self.pkhash[0:16] in mt:
+                                self.programmer = mt[self.pkhash[0:16]]
+                                self.info(f"Found loader by HWID+PKHash: {self.programmer}")
+                            else:
+                                for loader in mt:
+                                    self.programmer = mt[loader]
+                                    self.info(f"Found loader by HWID: {self.programmer}")
+                                    break
+                        elif self.hwidstr in self.loaderdb:
+                            mt = self.loaderdb[self.hwidstr]
+                            for loader in mt:
+                                self.programmer = mt[loader]
+                                self.info(f"Found loader by HWID: {self.programmer}")
+                                break
+                        else:
+                            # Try matching by MSM ID only
+                            msmid = self.hwidstr[:8]
+                            for hwidstr in self.loaderdb:
+                                if msmid == hwidstr[:8]:
+                                    if self.pkhash and self.pkhash[0:16] in self.loaderdb[hwidstr]:
+                                        self.programmer = self.loaderdb[hwidstr][self.pkhash[0:16]]
+                                        self.info(f"Found loader by MSM_ID+PKHash: {self.programmer}")
+                                        break
+                                    for loader in self.loaderdb[hwidstr]:
+                                        self.programmer = self.loaderdb[hwidstr][loader]
+                                        self.info(f"Found possible loader by MSM_ID: {self.programmer}")
+                                        break
+                                    if self.programmer:
+                                        break
+                else:
+                    # V3 extended info not available, show basic info
+                    self.info(f"\nReading Chip Info : OK")
+                    self.info(f"- Sahara version  : {version}")
+                    self.info(f"- Chip Serial Number : {self.serials}")
+                    if self.pkhash:
+                        self.info(f"- OEM PKHASH : {self.pkhash}")
+                    self.info(f"- Note: V3 extended info (cmd=0x0A) not available")
+                
+                if self.programmer == "":
+                    self.warning("No autodetection of loader possible with sahara version 3, please use --loader option.")
+            self.cmd_modeswitch(sahara_mode_t.SAHARA_MODE_COMMAND)
+            return True
+
+        return False
+
+    def streaminginfo(self):
+        if self.enter_command_mode():
+            self.serial = self.cmdexec_get_serial_num()
+            self.info(f"Device serial : {hex(self.serial)}")
+            self.cmd_modeswitch(sahara_mode_t.SAHARA_MODE_COMMAND)
+            return True
+        return False
+
+    def cmd_done(self):
+        if self.cdc.write(pack("<II", cmd_t.SAHARA_DONE_REQ, 0x8)):
+            res = self.get_rsp()
+            time.sleep(0.3)
+            if "cmd" in res:
+                cmd = res["cmd"]
+                if cmd == cmd_t.SAHARA_DONE_RSP:
+                    return True
+                elif cmd == cmd_t.SAHARA_END_TRANSFER:
+                    if "data" in res:
+                        pkt = res["data"]
+                        if pkt.image_tx_status == status_t.SAHARA_NAK_INVALID_CMD:
+                            self.error("Invalid Transfer command received.")
+                            return False
+                else:
+                    self.error(f"Received invalid response {cmd}.")
+        return False
+
+    def cmd_reset_state_machine(self):
+        self.cdc.write(pack("<II", cmd_t.SAHARA_RESET_STATE_MACHINE_ID, 0x8))
+        return True
+
+    def cmd_reset(self):
+        self.cdc.write(pack("<II", cmd_t.SAHARA_RESET_REQ, 0x8))
+        try:
+            res = self.get_rsp()
+        except Exception as e:  # pylint: disable=broad-except
+            self.debug(str(e))
+            return False
+        if "cmd" in res:
+            if res["cmd"] == cmd_t.SAHARA_RESET_RSP:
+                return True
+            elif res["cmd"] == cmd_t.SAHARA_END_TRANSFER:
+                if "data" in res:
+                    pkt = res["data"]
+                    self.error(self.get_error_desc(pkt.image_tx_status))
+        return False
+
+    def read_memory(self, addr, bytestoread, display=False, wf=None):
+        data = b""
+        old = 0
+        pos = 0
+        total = bytestoread
+        if display:
+            print_progress(0, 100, prefix='Progress:', suffix='Complete', bar_length=50)
+        while bytestoread > 0:
+            if bytestoread > 0x080000:
+                length = 0x080000
+            else:
+                length = bytestoread
+            bytesread = 0
+            try:
+                self.cdc.read(1, 1)
+            except Exception as e:  # pylint: disable=broad-except
+                self.debug(str(e))
+                pass
+            if self.bit64:
+                if not self.cdc.write(pack("<IIQQ", cmd_t.SAHARA_64BIT_MEMORY_READ, 0x8 + 8 + 8, addr + pos,
+                                           length)):
+                    return None
+            else:
+                if not self.cdc.write(
+                        pack("<IIII", cmd_t.SAHARA_MEMORY_READ, 0x8 + 4 + 4, addr + pos, length)):
+                    return None
+            while length > 0:
+                try:
+                    tmp = self.cdc.read(length)
+                except Exception as e:  # pylint: disable=broad-except
+                    self.debug(str(e))
+                    return None
+                length -= len(tmp)
+                pos += len(tmp)
+                bytesread += len(tmp)
+                if wf is not None:
+                    wf.write(tmp)
+                else:
+                    data += tmp
+                if display:
+                    prog = round(float(pos) / float(total) * float(100), 1)
+                    if prog > old:
+                        if display:
+                            print_progress(prog, 100, prefix='Progress:', suffix='Complete', bar_length=50)
+                            old = prog
+            bytestoread -= bytesread
+        if display:
+            print_progress(100, 100, prefix='Progress:', suffix='Complete', bar_length=50)
+        '''
+        try:
+            self.cdc.read(0)
+        except:
+            return data
+        '''
+        return data
+
+    def dump_partitions(self, partition):
+        for part in partition:
+            filename = part["filename"]
+            desc = part["desc"]
+            mem_base = part["mem_base"]
+            length = part["length"]
+            print(f"Dumping {filename}({desc}) at {hex(mem_base)}, length {hex(length)}")
+            fname = os.path.join("memory", filename)
+            with open(fname, "wb") as wf:
+                self.read_memory(mem_base, length, True, wf)
+                if wf.tell() == length:
+                    print("Done dumping memory")
+                else:
+                    self.error("Error dumping memory")
+        self.cmd_reset()
+        return True
+
+    def debug_mode(self, dump_partitions=None, version=2):
+        if not self.cmd_hello(sahara_mode_t.SAHARA_MODE_MEMORY_DEBUG, version=version):
+            return False
+        if os.path.exists("memory"):
+            rmrf("memory")
+        os.mkdir("memory")
+        res = self.get_rsp()
+        if res["cmd"] == cmd_t.SAHARA_MEMORY_DEBUG or res["cmd"] == cmd_t.SAHARA_64BIT_MEMORY_DEBUG:
+            memory_table_addr = res["data"].memory_table_addr
+            memory_table_length = res["data"].memory_table_length
+            if self.bit64:
+                pktsize = 8 + 8 + 8 + 20 + 20
+                if memory_table_length % pktsize == 0:
+                    if memory_table_length != 0:
+                        print(
+                            f"Reading 64-Bit partition from {hex(memory_table_addr)} with length of " +
+                            f"{hex(memory_table_length)}")
+                        ptbldata = self.read_memory(memory_table_addr, memory_table_length)
+                        num_entries = len(ptbldata) // pktsize
+                        partitions = []
+                        for id_entry in range(0, num_entries):
+                            pd = self.ch.parttbl_64bit(ptbldata[id_entry * pktsize:(id_entry * pktsize) + pktsize])
+                            desc = pd.desc.replace(b"\x00", b"").decode('utf-8')
+                            filename = pd.filename.replace(b"\x00", b"").decode('utf-8')
+                            if dump_partitions and filename not in dump_partitions:
+                                continue
+                            mem_base = pd.mem_base
+                            save_pref = pd.save_pref
+                            length = pd.length
+                            partitions.append(dict(desc=desc, filename=filename, mem_base=mem_base, length=length,
+                                                   save_pref=save_pref))
+                            print(
+                                f"{filename}({desc}): Offset {hex(mem_base)}, Length {hex(length)}, " +
+                                f"SavePref {hex(save_pref)}")
+
+                        self.dump_partitions(partitions)
+                        return True
+
+                    return True
+            else:
+                pktsize = (4 + 4 + 4 + 20 + 20)
+                if memory_table_length % pktsize == 0:
+                    if memory_table_length != 0:
+                        print(f"Reading 32-Bit partition from {hex(memory_table_addr)} " +
+                              f"with length of {hex(memory_table_length)}")
+                        ptbldata = self.read_memory(memory_table_addr, memory_table_length)
+                        num_entries = len(ptbldata) // pktsize
+                        partitions = []
+                        for id_entry in range(0, num_entries):
+                            pd = self.ch.parttbl(ptbldata[id_entry * pktsize:(id_entry * pktsize) + pktsize])
+                            desc = pd.desc.replace(b"\x00", b"").decode('utf-8')
+                            filename = pd.filename.replace(b"\x00", b"").decode('utf-8')
+                            if dump_partitions and filename not in dump_partitions:
+                                continue
+                            mem_base = pd.mem_base
+                            save_pref = pd.save_pref
+                            length = pd.length
+                            partitions.append(dict(desc=desc, filename=filename, mem_base=mem_base, length=length,
+                                                   save_pref=save_pref))
+                            print(f"{filename}({desc}): Offset {hex(mem_base)}, " +
+                                  f"Length {hex(length)}, SavePref {hex(save_pref)}")
+
+                        self.dump_partitions(partitions)
+                    return True
+        elif res["data"].image_tx_status:
+            self.error(self.get_error_desc(res["data"].image_tx_status))
+            return False
+        return False
+
+    def upload_loader(self, version):
+        if self.programmer == "":
+            return ""
+
+        is_xml_config = self.programmer.lower().endswith(".xml")
+        mappings = {}
+        
+        if is_xml_config:
+            self.info(f"Parsing Sahara XML config: {self.programmer}")
+            # call xmlparser.py to parse the qsahara_device_programmer.xml
+            mappings = self.xml.parse_sahara_config(self.programmer)
+            if not mappings:
+                self.error("Failed to parse programmer.xml or no images found.")
+                return ""
+        else:
+            try:
+                self.info(f"Uploading loader {self.programmer} ...")  # pylint: disable=broad-except
+                with open(self.programmer, "rb") as rf:
+                    single_programmer_data = rf.read()
+            except Exception as e:  # pylint: disable=broad-except
+                self.error(str(e))
+                sys.exit()
+
+        if not self.cmd_hello(sahara_mode_t.SAHARA_MODE_IMAGE_TX_PENDING, version=version):
+            return ""
+
+        try:
+            loop = 0
+            while True:
+                resp = self.get_rsp()
+                if not resp: continue
+                
+                if "firehose" in resp: return "firehose"
+                
+                cmd = resp.get("cmd")
+
+                # handle multiple hello requests (some devices do this for multiple stages of loading)
+                if is_xml_config and cmd == cmd_t.SAHARA_HELLO_REQ:
+                    self.info("Device requested re-handshake (Next stage).")
+                    self.cmd_hello(sahara_mode_t.SAHARA_MODE_IMAGE_TX_PENDING, version=version)
+                    continue
+
+                if cmd in [cmd_t.SAHARA_64BIT_MEMORY_READ_DATA, cmd_t.SAHARA_READ_DATA]:
+                    if cmd == cmd_t.SAHARA_64BIT_MEMORY_READ_DATA:
+                        self.bit64 = True
+                        if loop == 0: self.info("64-Bit mode detected.")
+                    else:
+                        self.bit64 = False
+                        if loop == 0: self.info("32-Bit mode detected.")
+                    
+                    pkt = resp["data"]
+                    requested_id = pkt.image_id
+                    
+                    if is_xml_config:
+                        if requested_id in mappings:
+                            file_path = mappings[requested_id]
+                            if requested_id == 0x7: self.mode = "nandprg"
+                            elif requested_id == 0xB: self.mode = "enandprg"
+                            elif requested_id >= 0xC: self.mode = "firehose"
+
+                            with open(file_path, "rb") as rf:
+                                rf.seek(pkt.data_offset)
+                                data_to_send = rf.read(pkt.data_len)
+                                if len(data_to_send) < pkt.data_len:
+                                    data_to_send += b"\xFF" * (pkt.data_len - len(data_to_send))
+                                self.cdc.write(data_to_send)
+                        else:
+                            self.error(f"Device requested unknown ID {requested_id} (not in XML)")
+                            return "error"
+                    else:
+                        self.id = requested_id
+                        if self.id == 0x7: self.mode = "nandprg"
+                        elif self.id == 0xB: self.mode = "enandprg"
+                        elif self.id >= 0xC: self.mode = "firehose"
+
+                        data_offset = pkt.data_offset
+                        data_len = pkt.data_len
+
+                        temp_prog = single_programmer_data
+                        if data_offset + data_len > len(temp_prog):
+                            padding = b"\xFF" * (data_offset + data_len - len(temp_prog))
+                            temp_prog += padding
+                        
+                        data_to_send = temp_prog[data_offset:data_offset + data_len]
+                        self.cdc.write(data_to_send)
+                    
+                    loop += 1
+
+                elif cmd == cmd_t.SAHARA_END_TRANSFER:
+                    pkt = resp["data"]
+                    if pkt.image_tx_status == status_t.SAHARA_STATUS_SUCCESS:
+                        if self.cmd_done():
+                            if not is_xml_config:
+                                self.info("Loader successfully uploaded.")
+                                return self.mode
+                            else:
+                                if requested_id in mappings:
+                                    fname = os.path.basename(mappings[requested_id])
+                                    self.info(f"Stage for ID {requested_id} ({fname}) done.")
+                                else:
+                                    self.info(f"Stage for ID {requested_id} done.")
+                        else:
+                            self.error("Error on uploading Loader.")
+                            sys.exit(1)
+                    else:
+                        self.error(self.get_error_desc(pkt.image_tx_status))
+                        return "error"
+                
+                elif is_xml_config and cmd in [cmd_t.SAHARA_CMD_READY, cmd_t.SAHARA_DONE_RSP]:
+                    self.info("All images from XML uploaded.")
+                    return self.mode if self.mode != "" else "firehose"
+
+        except Exception as e:  # pylint: disable=broad-except
+            self.error("Unexpected error on uploading, maybe signature of loader wasn't accepted ?\n" + str(e))
+            return ""
+        return self.mode
+
+    def cmd_modeswitch(self, mode):
+        data = pack("<III", cmd_t.SAHARA_SWITCH_MODE, 0xC, mode)
+        self.cdc.write(data)
+
+    def cmd_exec(self, mcmd):  # CMD 0xD, RSP 0xE, CMD2 0xF
+        # Send request
+        data = pack("<III", cmd_t.SAHARA_EXECUTE_REQ, 0xC, mcmd)
+        self.cdc.write(data)
+        # Get info about request
+        res = self.get_rsp()
+        if "cmd" in res:
+            cmd = res["cmd"]
+            if res["cmd"] == cmd_t.SAHARA_EXECUTE_RSP:
+                pkt = res["data"]
+                data = pack("<III", cmd_t.SAHARA_EXECUTE_DATA, 0xC, mcmd)
+                self.cdc.write(data)
+                payload = self.cdc.usbread(pkt.data_len)
+                return payload
+            elif cmd == cmd_t.SAHARA_END_TRANSFER:
+                pkt = res["data"]
+                self.error(self.get_error_desc(pkt.image_tx_status))
+            return None
+        return res

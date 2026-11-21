@@ -1,0 +1,2426 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/uname"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/uname"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/uname"
+      - "/home/maddocks/hacktv/flutter/bin/uname"
+      - "/opt/librewolf/uname"
+      - "/opt/ble-analyzer-server/uname"
+      - "/opt/qcom/qpm/bin/uname"
+      - "/opt/qcom/qik/bin/uname"
+      - "/home/maddocks/.local/bin/uname"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/uname"
+      - "/home/maddocks/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Linux - 7.4.0-rc1-16ton - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/gmake"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/gmake"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/gmake"
+      - "/home/maddocks/hacktv/flutter/bin/gmake"
+      - "/opt/librewolf/gmake"
+      - "/opt/ble-analyzer-server/gmake"
+      - "/opt/qcom/qpm/bin/gmake"
+      - "/opt/qcom/qik/bin/gmake"
+      - "/home/maddocks/.local/bin/gmake"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/gmake"
+      - "/home/maddocks/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/cc"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/cc"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/cc"
+      - "/home/maddocks/hacktv/flutter/bin/cc"
+      - "/opt/librewolf/cc"
+      - "/opt/ble-analyzer-server/cc"
+      - "/opt/qcom/qpm/bin/cc"
+      - "/opt/qcom/qik/bin/cc"
+      - "/home/maddocks/.local/bin/cc"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/cc"
+      - "/home/maddocks/bin/cc"
+      - "/usr/local/sbin/cc"
+      - "/usr/local/bin/cc"
+      - "/usr/sbin/cc"
+    found: "/usr/bin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake-4.2/Modules/"
+    found: "/usr/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/4.2.3/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/dlltool"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/dlltool"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/dlltool"
+      - "/home/maddocks/hacktv/flutter/bin/dlltool"
+      - "/opt/librewolf/dlltool"
+      - "/opt/ble-analyzer-server/dlltool"
+      - "/opt/qcom/qpm/bin/dlltool"
+      - "/opt/qcom/qik/bin/dlltool"
+      - "/home/maddocks/.local/bin/dlltool"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/dlltool"
+      - "/home/maddocks/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/games/dlltool"
+      - "/usr/local/games/dlltool"
+      - "/snap/bin/dlltool"
+      - "/home/maddocks/.dotnet/tools/dlltool"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/dlltool"
+      - "/home/maddocks/android-sdk/platform-tools/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/tapi"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/tapi"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/tapi"
+      - "/home/maddocks/hacktv/flutter/bin/tapi"
+      - "/opt/librewolf/tapi"
+      - "/opt/ble-analyzer-server/tapi"
+      - "/opt/qcom/qpm/bin/tapi"
+      - "/opt/qcom/qik/bin/tapi"
+      - "/home/maddocks/.local/bin/tapi"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/tapi"
+      - "/home/maddocks/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/usr/games/tapi"
+      - "/usr/local/games/tapi"
+      - "/snap/bin/tapi"
+      - "/home/maddocks/.dotnet/tools/tapi"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/tapi"
+      - "/home/maddocks/android-sdk/platform-tools/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-12.5"
+      - "gcc-ar-12"
+      - "gcc-ar12"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-12.5"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/gcc-ar-12.5"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/gcc-ar-12.5"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/gcc-ar-12.5"
+      - "/home/maddocks/hacktv/flutter/bin/gcc-ar-12.5"
+      - "/opt/librewolf/gcc-ar-12.5"
+      - "/opt/ble-analyzer-server/gcc-ar-12.5"
+      - "/opt/qcom/qpm/bin/gcc-ar-12.5"
+      - "/opt/qcom/qik/bin/gcc-ar-12.5"
+      - "/home/maddocks/.local/bin/gcc-ar-12.5"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/gcc-ar-12.5"
+      - "/home/maddocks/bin/gcc-ar-12.5"
+      - "/usr/local/sbin/gcc-ar-12.5"
+      - "/usr/local/bin/gcc-ar-12.5"
+      - "/usr/sbin/gcc-ar-12.5"
+      - "/sbin/gcc-ar-12.5"
+      - "/bin/gcc-ar-12.5"
+      - "/usr/games/gcc-ar-12.5"
+      - "/usr/local/games/gcc-ar-12.5"
+      - "/snap/bin/gcc-ar-12.5"
+      - "/home/maddocks/.dotnet/tools/gcc-ar-12.5"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/gcc-ar-12.5"
+      - "/home/maddocks/android-sdk/platform-tools/gcc-ar-12.5"
+    found: "/usr/bin/gcc-ar-12"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-12.5"
+      - "gcc-ranlib-12"
+      - "gcc-ranlib12"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/hacktv/flutter/bin/gcc-ranlib-12.5"
+      - "/opt/librewolf/gcc-ranlib-12.5"
+      - "/opt/ble-analyzer-server/gcc-ranlib-12.5"
+      - "/opt/qcom/qpm/bin/gcc-ranlib-12.5"
+      - "/opt/qcom/qik/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/.local/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/bin/gcc-ranlib-12.5"
+      - "/usr/local/sbin/gcc-ranlib-12.5"
+      - "/usr/local/bin/gcc-ranlib-12.5"
+      - "/usr/sbin/gcc-ranlib-12.5"
+      - "/sbin/gcc-ranlib-12.5"
+      - "/bin/gcc-ranlib-12.5"
+      - "/usr/games/gcc-ranlib-12.5"
+      - "/usr/local/games/gcc-ranlib-12.5"
+      - "/snap/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/.dotnet/tools/gcc-ranlib-12.5"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/gcc-ranlib-12.5"
+      - "/home/maddocks/android-sdk/platform-tools/gcc-ranlib-12.5"
+    found: "/usr/bin/gcc-ranlib-12"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "CC"
+      - "g++"
+      - "aCC"
+      - "cl"
+      - "bcc"
+      - "xlC"
+      - "icpx"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "/usr/bin/"
+    found: "/usr/bin/c++"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/usr/share/cmake-4.2/Modules/"
+    found: "/usr/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/4.2.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    found: "/usr/bin/llvm-dlltool"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "LLVM archiver"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ar-21.1"
+      - "llvm-ar-21"
+      - "llvm-ar21"
+      - "llvm-ar"
+    candidate_directories:
+      - "/usr/lib/llvm-21/bin/"
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/lib/llvm-21/bin/llvm-ar-21.1"
+      - "/usr/bin/llvm-ar-21.1"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/llvm-ar-21.1"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/llvm-ar-21.1"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/llvm-ar-21.1"
+      - "/home/maddocks/hacktv/flutter/bin/llvm-ar-21.1"
+      - "/opt/librewolf/llvm-ar-21.1"
+      - "/opt/ble-analyzer-server/llvm-ar-21.1"
+      - "/opt/qcom/qpm/bin/llvm-ar-21.1"
+      - "/opt/qcom/qik/bin/llvm-ar-21.1"
+      - "/home/maddocks/.local/bin/llvm-ar-21.1"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/llvm-ar-21.1"
+      - "/home/maddocks/bin/llvm-ar-21.1"
+      - "/usr/local/sbin/llvm-ar-21.1"
+      - "/usr/local/bin/llvm-ar-21.1"
+      - "/usr/sbin/llvm-ar-21.1"
+      - "/sbin/llvm-ar-21.1"
+      - "/bin/llvm-ar-21.1"
+      - "/usr/games/llvm-ar-21.1"
+      - "/usr/local/games/llvm-ar-21.1"
+      - "/snap/bin/llvm-ar-21.1"
+      - "/home/maddocks/.dotnet/tools/llvm-ar-21.1"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/llvm-ar-21.1"
+      - "/home/maddocks/android-sdk/platform-tools/llvm-ar-21.1"
+      - "/usr/lib/llvm-21/bin/llvm-ar-21"
+    found: "/usr/bin/llvm-ar-21"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "Generate index for LLVM archive"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib-21.1"
+      - "llvm-ranlib-21"
+      - "llvm-ranlib21"
+      - "llvm-ranlib"
+    candidate_directories:
+      - "/usr/lib/llvm-21/bin/"
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/lib/llvm-21/bin/llvm-ranlib-21.1"
+      - "/usr/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/hacktv/flutter/bin/llvm-ranlib-21.1"
+      - "/opt/librewolf/llvm-ranlib-21.1"
+      - "/opt/ble-analyzer-server/llvm-ranlib-21.1"
+      - "/opt/qcom/qpm/bin/llvm-ranlib-21.1"
+      - "/opt/qcom/qik/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/.local/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/bin/llvm-ranlib-21.1"
+      - "/usr/local/sbin/llvm-ranlib-21.1"
+      - "/usr/local/bin/llvm-ranlib-21.1"
+      - "/usr/sbin/llvm-ranlib-21.1"
+      - "/sbin/llvm-ranlib-21.1"
+      - "/bin/llvm-ranlib-21.1"
+      - "/usr/games/llvm-ranlib-21.1"
+      - "/usr/local/games/llvm-ranlib-21.1"
+      - "/snap/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/.dotnet/tools/llvm-ranlib-21.1"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/llvm-ranlib-21.1"
+      - "/home/maddocks/android-sdk/platform-tools/llvm-ranlib-21.1"
+      - "/usr/lib/llvm-21/bin/llvm-ranlib-21"
+    found: "/usr/bin/llvm-ranlib-21"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-21.1"
+      - "clang-scan-deps-21"
+      - "clang-scan-deps21"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/usr/lib/llvm-21/bin/"
+      - "/usr/bin/"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/"
+      - "/home/maddocks/hacktv/flutter/bin/"
+      - "/opt/librewolf/"
+      - "/opt/ble-analyzer-server/"
+      - "/opt/qcom/qpm/bin/"
+      - "/opt/qcom/qik/bin/"
+      - "/home/maddocks/.local/bin/"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/"
+      - "/home/maddocks/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/maddocks/.dotnet/tools/"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/"
+      - "/home/maddocks/android-sdk/platform-tools/"
+    searched_directories:
+      - "/usr/lib/llvm-21/bin/clang-scan-deps-21.1"
+      - "/usr/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/.nvm/versions/node/v24.21.0/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/.sdkman/candidates/gradle/current/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/hacktv/flutter/bin/clang-scan-deps-21.1"
+      - "/opt/librewolf/clang-scan-deps-21.1"
+      - "/opt/ble-analyzer-server/clang-scan-deps-21.1"
+      - "/opt/qcom/qpm/bin/clang-scan-deps-21.1"
+      - "/opt/qcom/qik/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/.local/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/bin/clang-scan-deps-21.1"
+      - "/usr/local/sbin/clang-scan-deps-21.1"
+      - "/usr/local/bin/clang-scan-deps-21.1"
+      - "/usr/sbin/clang-scan-deps-21.1"
+      - "/sbin/clang-scan-deps-21.1"
+      - "/bin/clang-scan-deps-21.1"
+      - "/usr/games/clang-scan-deps-21.1"
+      - "/usr/local/games/clang-scan-deps-21.1"
+      - "/snap/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/.dotnet/tools/clang-scan-deps-21.1"
+      - "/home/maddocks/android-sdk/cmdline-tools/latest/bin/clang-scan-deps-21.1"
+      - "/home/maddocks/android-sdk/platform-tools/clang-scan-deps-21.1"
+      - "/usr/lib/llvm-21/bin/clang-scan-deps-21"
+    found: "/usr/bin/clang-scan-deps-21"
+    search_context:
+      ENV{PATH}:
+        - "/home/maddocks/.nvm/versions/node/v24.21.0/bin"
+        - "/home/maddocks/.sdkman/candidates/gradle/current/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/home/maddocks/hacktv/flutter/bin"
+        - "/opt/librewolf"
+        - "/opt/ble-analyzer-server"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qpm/bin"
+        - "/opt/qcom/qik/bin"
+        - "/home/maddocks/.local/bin"
+        - "/home/maddocks/.local/share/gem/ruby/3.2.0/bin"
+        - "/home/maddocks/bin"
+        - "/home/maddocks/arduino-1.8.19/portable/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin"
+        - "/opt/librewolf"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/maddocks/.dotnet/tools"
+        - "/home/maddocks/android-sdk/cmdline-tools/latest/bin"
+        - "/home/maddocks/android-sdk/platform-tools"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA"
+      binary: "/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-21"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b90f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1b90f.dir/build.make CMakeFiles/cmTC_1b90f.dir/build
+        gmake[1]: Entering directory '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA'
+        Building C object CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 12.5.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.5.0 (Ubuntu 12.5.0-9ubuntu1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b90f.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/12/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1b90f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccyp1LR6.s
+        GNU C17 (Ubuntu 12.5.0-9ubuntu1) version 12.5.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 12.5.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/include-fixed"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/12/include
+         /usr/local/include
+         /usr/x86_64-linux-gnu/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C17 (Ubuntu 12.5.0-9ubuntu1) version 12.5.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 12.5.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 18858760015f833dbc0e42576644e866
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b90f.dir/'
+         as -v --64 -o CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o /tmp/ccyp1LR6.s
+        GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_1b90f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b90f.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 12.5.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.5.0 (Ubuntu 12.5.0-9ubuntu1) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b90f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b90f.'
+         /usr/lib/gcc/x86_64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIDC5wF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b90f /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. -v CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o
+        collect2 version 12.5.0
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIDC5wF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b90f /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. -v CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.46
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b90f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b90f.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -o cmTC_1b90f
+        gmake[1]: Leaving directory '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/12/include]
+          add: [/usr/local/include]
+          add: [/usr/x86_64-linux-gnu/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/12/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/x86_64-linux-gnu/include] ==> [/usr/x86_64-linux-gnu/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/12/include;/usr/local/include;/usr/x86_64-linux-gnu/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b90f/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1b90f.dir/build.make CMakeFiles/cmTC_1b90f.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-tiKdtA']
+        ignore line: [Building C object CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 12.5.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.5.0 (Ubuntu 12.5.0-9ubuntu1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b90f.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/12/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1b90f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccyp1LR6.s]
+        ignore line: [GNU C17 (Ubuntu 12.5.0-9ubuntu1) version 12.5.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.5.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/12/include-fixed"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/x86_64-linux-gnu/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Ubuntu 12.5.0-9ubuntu1) version 12.5.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 12.5.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 18858760015f833dbc0e42576644e866]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b90f.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o /tmp/ccyp1LR6.s]
+        ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_1b90f]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b90f.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 12.5.0-9ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-12-jfLED9/gcc-12-12.5.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.5.0 (Ubuntu 12.5.0-9ubuntu1) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b90f' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b90f.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIDC5wF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b90f /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. -v CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccIDC5wF.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_1b90f] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o]
+        ignore line: [collect2 version 12.5.0]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccIDC5wF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b90f /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o /usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/12 -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib -L/usr/lib/gcc/x86_64-linux-gnu/12/../../.. -v CMakeFiles/cmTC_1b90f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o] ==> [/usr/x86_64-linux-gnu/lib/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crti.o] ==> [/usr/x86_64-linux-gnu/lib/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib/crtn.o] ==> [/usr/x86_64-linux-gnu/lib/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12] ==> [/usr/lib/gcc/x86_64-linux-gnu/12]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib/../lib] ==> [/usr/x86_64-linux-gnu/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/lib] ==> [/usr/x86_64-linux-gnu/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/12/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/x86_64-linux-gnu/lib/Scrt1.o;/usr/x86_64-linux-gnu/lib/crti.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/12/crtendS.o;/usr/x86_64-linux-gnu/lib/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/12;/usr/x86_64-linux-gnu/lib;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.46
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA"
+      binary: "/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-21"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_eb114/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_eb114.dir/build.make CMakeFiles/cmTC_eb114.dir/build
+        gmake[1]: Entering directory '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA'
+        Building CXX object CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -MD -MT CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
+        Ubuntu clang version 21.1.8 (6ubuntu1)
+        Target: x86_64-pc-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/lib/llvm-21/bin
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/11
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/13
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/14
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/9
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/12
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/14
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-21/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA -v -fcoverage-compilation-dir=/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA -resource-dir /usr/lib/llvm-21/lib/clang/21 -dependency-file CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/x86_64-linux-gnu/c++/15 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15/backward -internal-isystem /usr/lib/llvm-21/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 21.1.8 based upon LLVM 21.1.8 default target x86_64-pc-linux-gnu
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15
+         /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/x86_64-linux-gnu/c++/15
+         /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15/backward
+         /usr/lib/llvm-21/lib/clang/21/include
+         /usr/local/include
+         /usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include
+         /usr/include/x86_64-linux-gnu
+         /include
+         /usr/include
+        End of search list.
+        Linking CXX executable cmTC_eb114
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb114.dir/link.txt --verbose=1
+        Ubuntu clang version 21.1.8 (6ubuntu1)
+        Target: x86_64-pc-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/lib/llvm-21/bin
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/11
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/13
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/14
+        Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/9
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/12
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/14
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15
+        Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9
+        Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_eb114 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib/../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib -L/lib -L/usr/lib -v CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.46
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_eb114
+        gmake[1]: Leaving directory '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/x86_64-linux-gnu/c++/15]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15/backward]
+          add: [/usr/lib/llvm-21/lib/clang/21/include]
+          add: [/usr/local/include]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15] ==> [/usr/include/c++/15]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/x86_64-linux-gnu/c++/15] ==> [/usr/include/x86_64-linux-gnu/c++/15]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15/backward] ==> [/usr/include/c++/15/backward]
+        collapse include dir [/usr/lib/llvm-21/lib/clang/21/include] ==> [/usr/lib/llvm-21/lib/clang/21/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include] ==> [/usr/x86_64-linux-gnu/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/include] ==> [/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/15;/usr/include/x86_64-linux-gnu/c++/15;/usr/include/c++/15/backward;/usr/lib/llvm-21/lib/clang/21/include;/usr/local/include;/usr/x86_64-linux-gnu/include;/usr/include/x86_64-linux-gnu;/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_eb114/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_eb114.dir/build.make CMakeFiles/cmTC_eb114.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA']
+        ignore line: [Building CXX object CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -MD -MT CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Ubuntu clang version 21.1.8 (6ubuntu1)]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/lib/llvm-21/bin]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/11]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/13]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/14]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/9]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/12]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/14]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9]
+        ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-21/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA -v -fcoverage-compilation-dir=/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/CMakeScratch/TryCompile-Ryl9kA -resource-dir /usr/lib/llvm-21/lib/clang/21 -dependency-file CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/x86_64-linux-gnu/c++/15 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15/backward -internal-isystem /usr/lib/llvm-21/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 21.1.8 based upon LLVM 21.1.8 default target x86_64-pc-linux-gnu]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/x86_64-linux-gnu/c++/15]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/15/../../../../include/c++/15/backward]
+        ignore line: [ /usr/lib/llvm-21/lib/clang/21/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_eb114]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb114.dir/link.txt --verbose=1]
+        ignore line: [Ubuntu clang version 21.1.8 (6ubuntu1)]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/lib/llvm-21/bin]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/11]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/13]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/14]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc-cross/i686-linux-gnu/9]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/12]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/13]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/14]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9]
+        ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/15]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_eb114 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib/../lib64 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib -L/lib -L/usr/lib -v CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_eb114] ==> ignore
+          arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
+          arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib/../lib64] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib64]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib64] ==> dir [/usr/lib64]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_eb114.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
+          arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15] ==> [/usr/lib/gcc/x86_64-linux-gnu/15]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib/../lib64] ==> [/usr/x86_64-linux-gnu/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/lib] ==> [/usr/x86_64-linux-gnu/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib/x86_64-linux-gnu/Scrt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o;/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/15;/usr/x86_64-linux-gnu/lib64;/usr/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/x86_64-linux-gnu/lib;/lib;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.46
+...

@@ -1,0 +1,13 @@
+--- edlclient/Library/xmlparser.py
++++ edlclient/Library/xmlparser.py
+@@ -18,6 +18,10 @@ def getresponse(self, input):
+             line = b"<?xml" + line
+             if b"\xf0\xe9\x88\x14" in line:
+                 line=line.replace(b"\xf0\xe9\x88\x14",b"")
++            # Bug in loader. Perhaps use some sort of permissive parser. Or drop XML parsing altogether and just yolo strings?
++            # DeviceClass - [LIB]: RX:<response value="ACK" rawmode="false"" feature_flags="0x1" /></data>
++            #                                                              ^ typo in loader code!
++            line = line.replace(b'"" feature_flags="', b'" feature_flags="')
+             parser = ET.XMLParser(encoding="utf-8")
+             try:
+                 tree = ET.fromstring(line, parser=parser)

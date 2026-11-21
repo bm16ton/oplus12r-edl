@@ -1,0 +1,3 @@
+/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/QSaharaServer.dir
+/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/edit_cache.dir
+/home/maddocks/oneplus-12r/oplus12r-edl/QSaharaServer/src/build2/CMakeFiles/rebuild_cache.dir

@@ -32,3 +32,9 @@ I also wanted to see if any modified/unsigned images would flash via edl this wa
 ```
 ./edl w init_boot_a $(pwd)/init_boot_current.img  --memory=ufs --lun=4  --loader=prog_firehose_ddr.elf --debugmode
 ```
+
+
+UPDATE added a new bkerler edl tools fork which can do everything including loading the firehose and all VIP stuff, making QSaharaServer
+and fhloader not sttrictly required. Its in the edl folder. Example with new VIP options;
+
+./edl.py printgpt --loader=firehose --vip --vip-digest=Digest.mbn --vip-sign=sig.dat --skipinitialread --memory=UFS

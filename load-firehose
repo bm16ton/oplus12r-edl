@@ -1,0 +1,9 @@
+#!/bin/bash
+cd oplus_8g2
+sudo ./QSaharaServer -p /dev/ttyUSB0 -s 13:firehose
+./fh_loader --port=/dev/ttyUSB0 --signeddigests=Digest.mbn --noprompt --showpercentagecomplete --zlpawarehost=1 --memoryname=ufs --testvipimpact
+cd ../edl-8g2-patch/
+rm logs/log.txt
+touch logs/log.txt
+cd ../edl-8g2-patch
+

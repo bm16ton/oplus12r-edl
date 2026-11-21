@@ -1787,12 +1787,12 @@ void InitLogging (void)
     //setvbuf(fp, NULL, _IOFBF, PORT_TRACE_LOG_BUFFER_SIZE);  // aaron put this back on later
 }
 
-#define TEMP_LOG_SIZE 8192
+#define TEMP_LOG_SIZE 8500
 
 void MyLog (int log_level, const char *func_name, int line_number, const char *format, ...)
 {
     va_list args;
-    char log[TEMP_LOG_SIZE], fileloglevel[TEMP_LOG_SIZE], screenloglevel[TEMP_LOG_SIZE], timelog[TEMP_LOG_SIZE];
+    char log[8510], fileloglevel[8510], screenloglevel[8510], timelog[8100];
     time_t current_time;
     struct tm *local_time;
     char PrintToScreen = 0; // assume false
@@ -1857,7 +1857,7 @@ void MyLog (int log_level, const char *func_name, int line_number, const char *f
         break;
 
     case LOG_FILE_ONLY:
-      snprintf (fileloglevel, sizeof(fileloglevel), "%s DEBUG: %s:%d ", timelog, func_name, line_number);
+      snprintf (fileloglevel, 8510, "%s DEBUG: ", timelog);
       snprintf (screenloglevel, sizeof(screenloglevel), "%s DEBUG: ", timelog);
         break;
 
@@ -1883,7 +1883,7 @@ void MyLog (int log_level, const char *func_name, int line_number, const char *f
             ExitAndShowLog (1);
         }
 
-        snprintf (fileloglevel, sizeof(fileloglevel),
+        snprintf (fileloglevel, 8911,
                  "\n\n\n"
                  "\t                         (_)            \n"
                  "\t__      ____ _ _ __ _ __  _ _ __   __ _ \n"
@@ -1892,7 +1892,7 @@ void MyLog (int log_level, const char *func_name, int line_number, const char *f
                  "\t  \\_/\\_/ \\__,_|_|  |_| |_|_|_| |_|\\__, |\n"
                  "\t                                   __/ |\n"
                  "\t                                  |___/ \n\n"
-                 "%s WARNING: %s:%d ", timelog, func_name, line_number);
+                 "%s WARNING: ", timelog);
 
         snprintf (screenloglevel, sizeof(screenloglevel),
                  "\n\n\n"
@@ -1976,7 +1976,7 @@ int getoptarg (int i, char * argv[], char * Option, SIZE_T SizeOfOpt, char * Arg
 
     pch = strstr (Option, "=");
 
-    if (pch != '\0')
+    if (pch != NULL)
     {
         //printf("pch is NOT NULL\n\n");
         // To be here pch is pointing at "=COM5", Option is pointing at "--port=COM5"
@@ -3129,19 +3129,19 @@ void CreateFFUXMLTag(struct FFUImage_t * FFU, uint64_t FileOffset, int64_t Start
     snprintf(temp_buffer, sizeof(temp_buffer), "SECTOR_SIZE_IN_BYTES=\"%"SIZE_T_FORMAT"\" ", FFU->sector_size_in_bytes); 
     AppendToBuffer(tx_buffer, temp_buffer, FIREHOSE_TX_BUFFER_SIZE);
 
-    snprintf(temp_buffer, sizeof(temp_buffer), "num_partition_sectors=\"%"SIZE_T_FORMAT"\" ", NumSectors);
+    snprintf(temp_buffer, sizeof(temp_buffer), "num_partition_sectors=%ld", NumSectors);
     AppendToBuffer(tx_buffer, temp_buffer, FIREHOSE_TX_BUFFER_SIZE);
 
     snprintf(temp_buffer, sizeof(temp_buffer), "physical_partition_number=\"%"SIZE_T_FORMAT"\" ", FFU->physical_partition_number);
     AppendToBuffer(tx_buffer, temp_buffer, FIREHOSE_TX_BUFFER_SIZE);
     
     if (StartSector < 0)
-      snprintf(temp_buffer, sizeof(temp_buffer), "start_sector=\"NUM_DISK_SECTORS%"SIZE_T_FORMAT"\" ", StartSector);
+      snprintf(temp_buffer, sizeof(temp_buffer), "start_sector=\"NUM_DISK_SECTORS%ld", StartSector);
     else
-      snprintf(temp_buffer, sizeof(temp_buffer), "start_sector=\"%"SIZE_T_FORMAT"\" ", StartSector);
+      snprintf(temp_buffer, sizeof(temp_buffer), "start_sector=%ld", StartSector);
     AppendToBuffer(tx_buffer, temp_buffer, FIREHOSE_TX_BUFFER_SIZE);
 
-    snprintf(temp_buffer, sizeof(temp_buffer), "file_sector_offset=\"%"SIZE_T_FORMAT"\" ", FileOffset);
+    snprintf(temp_buffer, sizeof(temp_buffer), "file_sector_offset=%ld", FileOffset);
     AppendToBuffer(tx_buffer, temp_buffer, FIREHOSE_TX_BUFFER_SIZE);
 
     AppendToBuffer(tx_buffer, " />\n</data>", FIREHOSE_TX_BUFFER_SIZE);
@@ -6188,13 +6188,13 @@ SIZE_T CopyString (char *Dest, char *Source, SIZE_T  Dstart, SIZE_T  Sstart, SIZ
         return 1;
     }
 
-    if (Dest == '\0')
+    if (Dest == NULL)
     {
         printf ("CopyString Dest is NULL");  // Dest is null
         ExitAndShowLog (1);
     }
 
-    if (Source == '\0')
+    if (Source == NULL)
     {
         printf ("CopyString Source is NULL");  // Source is null
         ExitAndShowLog (1);
@@ -7828,7 +7828,7 @@ firehose_error_t GetNextPacket (void)
 
             pch = strstr ( (char *) &ReadBuffer[PacketLoc], "</data>");
 
-            if (pch == '\0')
+            if (pch == NULL)
                 NeedToReadFromChannel = 1;
             else if ( (char *) pch - (char *) &ReadBuffer[PacketLoc] < 10 && strlen (pch) <= (XML_HEADER_LENGTH + 2 * XML_TAIL_LENGTH) )
                 NeedToReadFromChannel = 1;
@@ -10349,7 +10349,7 @@ void time_throughput_calculate (struct timeval *start_time, struct timeval *end_
     double TimeInSeconds = 0.0, NetworkSlow = 0.0;
     char SizeString1[2048];
     char SizeString2[2048];
-    char SizeString3[2048] = "";
+    char SizeString3[4451] = "";
 
     timeval_subtract (&result, end_time, start_time);
 
@@ -10380,7 +10380,7 @@ void time_throughput_calculate (struct timeval *start_time, struct timeval *end_
       if (NetworkSlow < 100000000.0)
       {
         ReturnSizeString ( (SIZE_T) (size_bytes / NetworkElapsed), SizeString1, sizeof (SizeString1) );
-        snprintf (SizeString3, sizeof(SizeString3), "FILE ACCESS SLOW!! %10s in %6.3f seconds (%10sps) --- ", SizeString2, NetworkElapsed, SizeString1);
+        snprintf (SizeString3, 4450, "FILE ACCESS SLOW!! %10s in %6.3f seconds (%10sps) --- ", SizeString2, NetworkElapsed, SizeString1);
       }
     }
 
@@ -11034,7 +11034,7 @@ void ParseContentsXML (char *FileAndPath)
     size_t xml_buffer_size;
     char *xml_buffer;
 
-    if (FileAndPath == '\0' || strlen (FileAndPath) == 0)
+    if (FileAndPath == NULL || strlen (FileAndPath) == 0)
         return;
 
     dbg (LOG_INFO, "Attempting to access '%s'", FileAndPath);
